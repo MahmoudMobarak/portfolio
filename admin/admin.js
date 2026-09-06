@@ -9,11 +9,12 @@ const navItems = document.querySelectorAll('.nav-item');
 const tabPanels = document.querySelectorAll('.tab-panel');
 
 // Toast Helper
-function showToast(msg, isError = false) {
+function showToast(msg, isError = false, duration = 3500) {
   adminToast.textContent = msg;
   adminToast.style.background = isError ? '#ef4444' : '#10b981';
   adminToast.classList.add('show');
-  setTimeout(() => adminToast.classList.remove('show'), 3500);
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => adminToast.classList.remove('show'), duration);
 }
 
 // Tab Switching
@@ -700,9 +701,9 @@ document.getElementById('pushBtn').addEventListener('click', async () => {
     const res = await fetch('/api/push', { method: 'POST' });
     const result = await res.json();
     if (result.success) {
-      showToast('Successfully pushed to GitHub!');
+      showToast(result.message || 'Successfully pushed to GitHub!');
     } else {
-      showToast('Push failed: ' + (result.error || result.stderr), true);
+      showToast(result.error || 'Push failed', true, 12000);
     }
   } catch (err) {
     showToast('Push failed: ' + err.message, true);

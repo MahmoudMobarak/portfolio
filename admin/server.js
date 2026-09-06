@@ -166,15 +166,60 @@ const server = http.createServer(async (req, res) => {
 // API: Push changes to GitHub
 if (req.method === 'POST' && pathname === '/api/push') {
   const { exec } = require('child_process');
-  exec('git add . && git commit -m "Auto update via admin panel" && git push', { cwd: rootDir }, (err, stdout, stderr) => {
-    if (err) {
-      res.writeHead(500, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ success: false, error: err.message, stderr }));
-    } else {
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ success: true, message: 'Pushed to GitHub successfully.', stdout }));
-    }
+  // GIT_TERMINAL_PROMPT=0 makes git fail fast instead of hanging on a hidden password prompt,
+  // and timeout: 120000 guarantees the request always answers within 2 minutes.
+  const execOpts = { cwd: rootDir, timeout: 120000, env: Object.assign({}, process.env, { GIT_TERMINAL_PROMPT: '0' }) };
+  const run = (cmd) => new Promise((resolve) => {
+    exec(cmd, execOpts, (err, stdout, stderr) => resolve({ err, stdout: stdout || '', stderr: stderr || '' }));
   });
+
+  (async () => {
+    try {
+      // 0. A GitHub remote must exist at all
+      const remote = await run('git remote get-url origin');
+      if (remote.err) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: 'No GitHub repository is connected yet. Open the Tutorial tab -> "Commit & Publish" for the two commands that connect one.' }));
+        return;
+      }
+
+      // 1. Stage everything
+      await run('git add .');
+
+      // 2. Commit. "nothing to commit" is normal, not an error.
+      const commit = await run('git commit -m "Auto update via admin panel"');
+      const nothingToCommit = commit.err && /nothing to commit|no changes added/i.test(commit.stdout + commit.stderr);
+      if (commit.err && !nothingToCommit) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: ('Commit failed: ' + (commit.stderr || commit.err.message)).trim() }));
+        return;
+      }
+
+      // 3. Push (also picks up any earlier commit whose push failed)
+      const push = await run('git push origin HEAD');
+      if (push.err) {
+        const detail = (push.stderr || push.stdout || push.err.message).trim();
+        let hint = '';
+        if (/could not read|authentication|403|permission/i.test(detail)) {
+          hint = ' — GitHub sign-in looks expired. Open Git Bash in the project folder and run "git push" once to sign in again, then retry.';
+        } else if (/could not resolve|connection|timed out|network/i.test(detail)) {
+          hint = ' — No internet connection detected. Check your network and retry.';
+        }
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: ('Push failed: ' + detail + hint).trim() }));
+        return;
+      }
+
+      const msg = nothingToCommit
+        ? 'Everything was already up to date on GitHub.'
+        : 'Saved and pushed to GitHub successfully.';
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true, message: msg }));
+    } catch (e) {
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: false, error: 'Push failed: ' + e.message }));
+    }
+  })();
   return;
 }
 
