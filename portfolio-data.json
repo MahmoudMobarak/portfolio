@@ -1,0 +1,513 @@
+{
+  "hero": {
+    "name": "Mahmoud Ahmed Mobarak",
+    "subtitle": "A Year 10 Student at The Westminster School, Dubai",
+    "photo": "Photos/Mahmoud-Mobarak-Photo.png",
+    "bashLines": [
+      "I am a high-achieving student passionate about learning, innovation, and excellence. I enjoy tackling complex challenges, exploring new ideas, and applying knowledge practically in projects and real-life applications.",
+      "I constantly strive to grow academically, personally, and creatively, whether through coding, engineering, robotics, chess, or pursuing aerospace and aviation interests.",
+      "I am driven by curiosity, discipline, and a commitment to develop both my technical skills and leadership capabilities.",
+      "Beyond academics, I enjoy engaging in extracurricular activities like football, solving puzzles, and creating innovative projects that expand my skillset and understanding of the world.",
+      "My ultimate goal is to combine creativity, technical mastery, and personal growth to excel in multiple fields including Computer Science, Aerospace Engineering, and Aviation."
+    ]
+  },
+  "reportCards": [
+    {
+      "year": "1",
+      "term": "Year 1 - Final Term",
+      "photo": "Report Cards/Photos/Final term year 1 report card.jpg",
+      "pdf": "Report Cards/PDF/Final term year 1 report card.pdf"
+    },
+    {
+      "year": "2",
+      "term": "Year 2 - First Term",
+      "photo": "Report Cards/Photos/First term Year 2 report card.jpg",
+      "pdf": "Report Cards/PDF/First term Year 2 report card.pdf"
+    },
+    {
+      "year": "2",
+      "term": "Year 2 - Second Term",
+      "photo": "Report Cards/Photos/Second term year 2 report card.jpg",
+      "pdf": "Report Cards/PDF/Second term year 2 report card.pdf"
+    },
+    {
+      "year": "2",
+      "term": "Year 2 - Final Term",
+      "photo": "Report Cards/Photos/Final Term year 2 report card.jpg",
+      "pdf": "Report Cards/PDF/Final term year 2 report card.pdf"
+    },
+    {
+      "year": "3",
+      "term": "Year 3 - First Term",
+      "photo": "Report Cards/Photos/First term Year 3 report card.jpg",
+      "pdf": "Report Cards/PDF/First term Year 3 report card.pdf"
+    },
+    {
+      "year": "3",
+      "term": "Year 3 - Second Term",
+      "photo": "Report Cards/Photos/Second term year 3 report card.jpg",
+      "pdf": "Report Cards/PDF/Second term year 3 report card.pdf"
+    },
+    {
+      "year": "3",
+      "term": "Year 3 - Final Term",
+      "photo": "Report Cards/Photos/Final term year 3 report card.jpg",
+      "pdf": "Report Cards/PDF/Final term year 3 report card.pdf"
+    },
+    {
+      "year": "9",
+      "term": "Year 9 - Mid Term",
+      "photo": "Report Cards/Photos/Mid term report year 9.png",
+      "pdf": "Report Cards/PDF/Mid-Term Report_academic_year 9.pdf"
+    },
+    {
+      "year": "9",
+      "term": "Year 9 - Second Term",
+      "photo": "Report Cards/Photos/Second term report year 9.png",
+      "pdf": "Report Cards/PDF/Second Term Report_academic_Year 9.pdf"
+    },
+    {
+      "year": "9",
+      "term": "Year 9 - Final Report",
+      "photo": "Report Cards/Photos/Final Report Year 9.png",
+      "pdf": "Report Cards/PDF/Final Report_academic_Year 9.pdf"
+    },
+    {
+      "year": "10",
+      "term": "Year 10 - Mid Term",
+      "photo": "Report Cards/Photos/Mid Term report year 10.png",
+      "pdf": "Report Cards/PDF/Mid-Term Report_academic_year 10.pdf"
+    }
+  ],
+  "skills": {
+    "technical": [
+      "Python",
+      "Artificial Intelligence",
+      "HTML & CSS",
+      "Robotics",
+      "System Design"
+    ],
+    "academic": [
+      "Analytical Thinking",
+      "Mathematical Reasoning",
+      "Research & Self-Study",
+      "Qur'an Memorization"
+    ],
+    "soft": [
+      "Leadership",
+      "Time Management",
+      "Discipline",
+      "Communication"
+    ]
+  },
+  "certificates": [
+    {
+      "category": "AI & Programming",
+      "title": "AI Level 1",
+      "photo": "Certificate/AI-Level 1.jpg",
+      "description": "Foundational artificial intelligence course covering core concepts, terminology, and hands-on exercises."
+    },
+    {
+      "category": "AI & Programming",
+      "title": "AI Level 2",
+      "photo": "Certificate/AI-Level 2.jpg",
+      "description": "Built on Level 1 with deeper model training, data handling, and practical AI applications."
+    },
+    {
+      "category": "AI & Programming",
+      "title": "AI Level 3",
+      "photo": "Certificate/AI-Level 3.jpg",
+      "description": "Advanced AI coursework — designing and evaluating models on real datasets."
+    },
+    {
+      "category": "AI & Programming",
+      "title": "AI Level 4",
+      "photo": "Certificate/AI-Level 4.jpg",
+      "description": "Top-level AI certification, completing the full program series."
+    },
+    {
+      "category": "AI & Programming",
+      "title": "Python Programming",
+      "photo": "Certificate/Python Programming.jpg",
+      "description": "Certified Python proficiency — syntax, data structures, and problem-solving."
+    },
+    {
+      "category": "AI & Programming",
+      "title": "HTML & CSS Programming",
+      "photo": "Certificate/Html,css programming.jpg",
+      "description": "Web fundamentals certification covering semantic HTML and modern CSS layouts."
+    },
+    {
+      "category": "Robotics & STEM",
+      "title": "FLL LEGO 2026",
+      "photo": "Certificate/FLL LEGO 2026.jpg",
+      "description": "First LEGO League 2026 competitor — designing, building, and programming autonomous LEGO robots."
+    },
+    {
+      "category": "Robotics & STEM",
+      "title": "FLL Participation",
+      "photo": "Certificate/FLL-Participation.jpg",
+      "description": "Recognized participation in the First LEGO League robotics competition."
+    },
+    {
+      "category": "Robotics & STEM",
+      "title": "Physics Exhibition",
+      "photo": "Certificate/Contribution in Physics Exhibition.jpg",
+      "description": "Contributed an exhibited project to the school Physics Exhibition."
+    },
+    {
+      "category": "Robotics & STEM",
+      "title": "Organic Expo Participation",
+      "photo": "Certificate/Organic Expo Participation.jpg",
+      "description": "Presented sustainable innovations at the Organic Expo."
+    },
+    {
+      "category": "Robotics & STEM",
+      "title": "2nd Place in GLOBEX",
+      "photo": "Certificate/2nd place in GLOBEX.jpg",
+      "description": "Second place at the GLOBEX competition with an engineering project."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "Star Student - Maths 2025",
+      "photo": "Certificate/Star student for maths 2025.jpg",
+      "description": "Awarded Star Student for outstanding performance in Mathematics."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "Star Student - March Year 5",
+      "photo": "Certificate/Star student March Year 5.jpg",
+      "description": "Named Star Student in March of Year 5 for overall excellence."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "Star Student - November Year 6",
+      "photo": "Certificate/Star Student November 2021 Year 6.jpg",
+      "description": "Named Star Student in November of Year 6 for overall excellence."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "450 Points Achievement",
+      "photo": "Certificate/450 Points.png",
+      "description": "Reached the 450-point achievement milestone."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "2nd Position - Grade 2",
+      "photo": "Certificate/2nd position in garde 2.jpg",
+      "description": "Finished Grade 2 in 2nd position academically."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "4th Position - Grade 1",
+      "photo": "Certificate/4Th Postion in garde 1.jpg",
+      "description": "Finished Grade 1 in 4th position academically."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "5th Position - Grade 1 Second Term",
+      "photo": "Certificate/5Th postion in second term exams in garde 1.jpg",
+      "description": "Finished Grade 1 second term in 5th position."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "3000 Reading Achievement",
+      "photo": "Certificate/Achieve 3000 Reading Achievement.jpg",
+      "description": "Read 3,000 pages as part of the school reading program."
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "100% Attendance - Year 7",
+      "photo": "Certificate/100 Attendance year 7.jpg",
+      "description": "Perfect attendance across the whole of Year 7."
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "100% Attendance - 2025",
+      "photo": "Certificate/100% Attendance Certificate-January-2025.jpg",
+      "description": "Perfect attendance for the 2025 academic year."
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "100 Punctuality Certificate",
+      "photo": "Certificate/Certificate of Apperciation-100 Punctuality.jpg",
+      "description": "Recognized for consistently punctual arrival across the term."
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "GEM Rewards - 300 Points",
+      "photo": "Certificate/Be A GEM Rewards Postcards_300P.jpeg",
+      "description": "Earned 300 GEM reward points for positive behavior and effort."
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "GEM Rewards - 50 Points",
+      "photo": "Certificate/Be A GEM Rewards Postcards_50P.jpg",
+      "description": "Earned 50 GEM reward points for positive behavior and effort."
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "Smartly Dressed - Year 6",
+      "photo": "Certificate/Smartly Dressed in Year 6.jpg",
+      "description": "Recognized for uniform excellence throughout Year 6."
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "Student of the Month",
+      "photo": "Certificate/SOM-Mahmoud Jan-10B1_page-0001.jpg",
+      "description": "Named Student of the Month for outstanding conduct and achievement."
+    },
+    {
+      "category": "Quran & Arabic",
+      "title": "Hifz Quran",
+      "photo": "Certificate/Hifz Quran.jpg",
+      "description": "Memorization achievement in the Quran Hifz program."
+    },
+    {
+      "category": "Quran & Arabic",
+      "title": "2 Consecutive Years - 100 in Arabic",
+      "photo": "Certificate/2 Consective year 100 in arabic.jpg",
+      "description": "Scored a perfect 100 in Arabic for two consecutive years."
+    }
+  ],
+  "projects": [
+    {
+      "title": "House Price Predictor",
+      "description": "A machine learning project built with Python and Scikit-Learn that predicts house prices based on various features such as location, size, and amenities.",
+      "photo": "Photos/Project Linear hose price predictor.jpg",
+      "tags": [
+        "Python",
+        "Scikit-Learn",
+        "Machine Learning"
+      ],
+      "link": "#",
+      "fullTitle": "House Price Predictor: ML Regression Model",
+      "points": [
+        "Built a machine learning model with Python and Scikit-Learn that predicts house prices from features like location, size, and amenities.",
+        "Cleaned and engineered real housing datasets to improve prediction accuracy.",
+        "Evaluated multiple regression algorithms and selected the strongest performer."
+      ],
+      "showLink": true
+    },
+    {
+      "title": "Cat vs Dog Classifier",
+      "description": "A deep learning computer vision model built using TensorFlow and Keras to classify images of cats and dogs with high accuracy.",
+      "photo": "Photos/Cat and dog Classifier.jpg",
+      "tags": [
+        "Python",
+        "TensorFlow",
+        "Computer Vision"
+      ],
+      "link": "#",
+      "fullTitle": "Cat vs Dog Classifier: Deep Learning Vision",
+      "points": [
+        "Developed a computer vision model using TensorFlow and Keras to classify images of cats and dogs with high accuracy.",
+        "Trained convolutional neural networks with data augmentation for robust results.",
+        "Processed and prepared hundreds of labeled training images."
+      ],
+      "showLink": true
+    },
+    {
+      "title": "Liver Cancer Predictor",
+      "description": "A healthcare AI project using machine learning algorithms to assist in the early prediction and classification of liver cancer from patient data.",
+      "photo": "Photos/Liver cancer Predictor .jpg",
+      "tags": [
+        "Python",
+        "Healthcare AI",
+        "Data Science"
+      ],
+      "link": "#",
+      "fullTitle": "Liver Cancer Predictor: Healthcare AI",
+      "points": [
+        "Created a healthcare AI project using machine learning to assist early prediction and classification of liver cancer from patient data.",
+        "Focused on responsible, data-driven decision support for medical screening.",
+        "Compared multiple classification algorithms to find the most reliable results."
+      ],
+      "showLink": true
+    },
+    {
+      "title": "Mahmoud Mobarak Portfolio",
+      "description": "A fully responsive personal portfolio website built using HTML, CSS, and JavaScript to showcase my academic achievements, projects, certifications, and extracurricular activities.",
+      "photo": "Photos/Mahmoud Mobarak Portfolio.png",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": "#",
+      "fullTitle": "Mahmoud Mobarak Portfolio: Personal Website",
+      "points": [
+        "Designed and built a fully responsive personal portfolio using HTML, CSS, and JavaScript.",
+        "Includes custom creations: a 3D flip book, animated wallet cards, and an interactive hierarchy diagram.",
+        "Runs as a fully static site with a local admin panel for easy content management."
+      ],
+      "showLink": true
+    },
+    {
+      "title": "Homemade Water Filter",
+      "description": "Designed and built a working homemade water filter using layered natural materials to demonstrate basic water purification principles.",
+      "photo": "Photos/Homemade Water Filter Photo.jpeg",
+      "tags": [
+        "STEM",
+        "Engineering",
+        "Environmental"
+      ],
+      "link": "#",
+      "fullTitle": "Homemade Water Filter: Engineering Project",
+      "points": [
+        "Designed and built a working water filter using layered household materials.",
+        "Tested filtration effectiveness across multiple design iterations.",
+        "Applied engineering design thinking to a real-world sustainability problem."
+      ],
+      "showLink": true
+    },
+    {
+      "title": "Solar Panel Model",
+      "description": "A hands-on engineering project demonstrating clean energy conversion using solar cells, exploring renewable energy principles.",
+      "photo": "Photos/Solar Pannel Model Photo.png",
+      "tags": [
+        "Renewable Energy",
+        "Solar",
+        "Engineering"
+      ],
+      "link": "#",
+      "fullTitle": "Solar Panel Model: Renewable Energy",
+      "points": [
+        "Constructed a working solar panel model demonstrating renewable energy conversion.",
+        "Measured and compared energy output under different light conditions.",
+        "Presented the project at a school science exhibition."
+      ],
+      "showLink": true
+    },
+    {
+      "title": "Lingua Mystica",
+      "description": "An interactive ancient script decoder and linguistic exploration tool exploring cipher systems and historic writing methods.",
+      "photo": "Photos/Lingua-mystica.png",
+      "tags": [
+        "JavaScript",
+        "Cryptography",
+        "UI/UX"
+      ],
+      "link": "#",
+      "fullTitle": "Lingua Mystica: Language Learning Concept",
+      "points": [
+        "Created a language-learning concept exploring creative approaches to mastering new languages.",
+        "Combined spaced repetition with gamified practice techniques.",
+        "Designed the user experience and learning flow from scratch."
+      ],
+      "showLink": true
+    },
+    {
+      "title": "KeyCraft E-commerce",
+      "description": "A modern, responsive e-commerce web concept for custom keychains with cart functionality and interactive product catalog.",
+      "photo": "Photos/Keycraft_photo.png",
+      "tags": [
+        "Web Development",
+        "E-Commerce",
+        "UI/UX"
+      ],
+      "link": "#",
+      "fullTitle": "KeyCraft: E-commerce Storefront",
+      "points": [
+        "Built an e-commerce concept store around keyboard products with a modern storefront.",
+        "Designed product pages, cart flow, and fully responsive layouts.",
+        "Focused on clean UI and conversion-friendly design patterns."
+      ],
+      "showLink": true
+    }
+  ],
+  "extracurriculars": [
+    {
+      "title": "Robotics Program - FLL",
+      "description": "As an active member of the school's First LEGO League (FLL) robotics team, I spend the season designing, building, and programming autonomous LEGO robots. Beyond the robot itself, I work on the innovation project side — researching real-world problems and pitching creative solutions to judges. The program has taught me how engineering, coding, and teamwork come together under real competition pressure.",
+      "photo": "Photos/FLL-Photo-1.png",
+      "lead": "Where code meets creation — building robots that think.",
+      "tags": [
+        "Robotics",
+        "Coding",
+        "Teamwork"
+      ],
+      "points": [
+        "Programmed autonomous robots using sensor-based navigation and mission strategy.",
+        "Collaborated with teammates to brainstorm, prototype, and test robot designs across the season.",
+        "Presented our innovation project and robot design directly to FLL judges.",
+        "Learned to stay calm and iterate fast when missions fail mid-competition."
+      ]
+    },
+    {
+      "title": "Physics Exhibition",
+      "description": "At the school Physics Exhibition, I designed and presented working scientific models that demonstrate core physical principles — turning textbook theory into something visitors can see, touch, and question. Explaining complex ideas to audiences of every age sharpened my ability to communicate science clearly and confidently.",
+      "photo": "Photos/Physics Exhibition Photo.jpeg",
+      "lead": "Turning abstract equations into experiments people can touch.",
+      "tags": [
+        "Science",
+        "Presentation",
+        "Physics"
+      ],
+      "points": [
+        "Built interactive demonstration models explaining core physics principles.",
+        "Presented to hundreds of visiting students and faculty across the exhibition.",
+        "Answered spontaneous deep-dive questions from teachers and judges.",
+        "Translated abstract equations into visual, hands-on experiences."
+      ]
+    },
+    {
+      "title": "Organic Expo",
+      "description": "Representing sustainable thinking at the Organic Expo, I presented eco-friendly innovations and organic solutions to industry visitors and judges. The expo pushed me to think about how engineering choices affect the environment, and how small design decisions can make products dramatically more sustainable.",
+      "photo": "Photos/Organic Expo photo 1.jpg",
+      "lead": "Innovation with a conscience — engineering for a greener future.",
+      "tags": [
+        "Sustainability",
+        "Innovation",
+        "Environment"
+      ],
+      "points": [
+        "Presented sustainable innovations to industry visitors and expo judges.",
+        "Researched the eco-friendly materials and processes behind our showcased solutions.",
+        "Discussed real-world sustainability trade-offs with professionals.",
+        "Represented the school at a public-facing environmental event."
+      ]
+    },
+    {
+      "title": "Globex Competition",
+      "description": "At the Globex competition, I presented a homemade water filter built from layered natural and household materials, demonstrating how basic engineering design can tackle real water-purification problems. The project earned 2nd place and taught me how to take an idea from rough prototype to a judged, professional presentation.",
+      "photo": "Photos/Globex photo 1.jpg",
+      "lead": "From a homemade filter to a judged engineering stage.",
+      "tags": [
+        "Engineering",
+        "2nd Place",
+        "STEM"
+      ],
+      "points": [
+        "Designed and built a layered water filter demonstrating real purification principles.",
+        "Earned 2nd place among competitive STEM project entries.",
+        "Explained filtration science and design iterations to the judging panel.",
+        "Took a project from concept to prototype to tested to presented."
+      ]
+    }
+  ],
+  "reportYears": [
+    "1",
+    "2",
+    "3",
+    "9",
+    "10"
+  ],
+  "certificateCategories": {
+    "AI & Programming": {
+      "description": "Technical certifications in artificial intelligence and programming."
+    },
+    "Robotics & STEM": {
+      "description": "Competitions, exhibitions, and hands-on STEM experience."
+    },
+    "Academic Achievements": {
+      "description": "Top placements and academic excellence awards."
+    },
+    "Dedication & Excellence": {
+      "description": "Recognition for punctuality, attendance, and conduct."
+    },
+    "Quran & Arabic": {
+      "description": "Religious and language achievements."
+    }
+  }
+}

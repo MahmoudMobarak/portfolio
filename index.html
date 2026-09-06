@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud Ahmed Mobarak's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stars.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Starfield background (Uiverse by amir_6539) -->
+<div class="starfield">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Mahmoud Ahmed Mobarak</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#role">My Role</a></li>
+      <li><a href="#journey">Experiences</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#academic">Academic Record</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#extracurriculars">Extracurriculars</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Milestone rail: white vertical line of checkpoints on the right -->
+<nav class="milestone-rail" aria-label="Page milestones">
+  <span class="milestone-line"></span>
+  <a class="milestone" href="#about" data-target="about">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">About</span>
+  </a>
+  <a class="milestone" href="#role" data-target="role">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">My Role</span>
+  </a>
+  <a class="milestone" href="#journey" data-target="journey">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">Experiences</span>
+  </a>
+  <a class="milestone" href="#skills" data-target="skills">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">Skills</span>
+  </a>
+  <a class="milestone" href="#academic" data-target="academic">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">Academic Record</span>
+  </a>
+  <a class="milestone" href="#certificates" data-target="certificates">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">Certificates</span>
+  </a>
+  <a class="milestone" href="#projects" data-target="projects">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">Projects</span>
+  </a>
+  <a class="milestone" href="#extracurriculars" data-target="extracurriculars">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">Extracurriculars</span>
+  </a>
+  <a class="milestone" href="#contact" data-target="contact">
+    <span class="milestone-dot"></span>
+    <span class="milestone-label">Contact</span>
+  </a>
+</nav>
+
+<main class="page-wrapper">
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section class="landing reveal" id="about">
+    <div class="landing-hero">
+    <div class="landing-image">
+      <!-- PHOTO NOTE: Profile photo of Mahmoud on the About/landing page. Local copy: Photos/Mahmoud-Mobarak-Photo.png. Change the src below to swap it. -->
+      <img src="Photos/Mahmoud-Mobarak-Photo.png" alt="Mahmoud Ahmed Mobarak's photo">
+    </div>
+
+    <div class="landing-text">
+      <h1>Hello, I’m <span class="typing-text" data-text="Mahmoud Ahmed Mobarak" data-delay="500"></span></h1>
+      <h2 class="subtitle typing-text" data-text="A Year 10 Student at The Westminster School, Dubai" data-delay="1800"></h2>
+
+      <!-- Terminal bash box holding the intro text (style from Uiverse.io by Manish-Tamang) -->
+      <aside class="bash-box">
+        <div class="bash-bar">
+          <div class="bash-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <p class="bash-title">bash</p>
+        </div>
+        <div class="bash-body">
+          <p class="bash-cmd">$ cat about_me.txt</p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <p class="bash-out">I am a high-achieving student passionate about learning, innovation, and excellence. I enjoy tackling complex challenges, exploring new ideas, and applying knowledge practically in projects and real-life applications.</p>
+          <p class="bash-out">I constantly strive to grow academically, personally, and creatively, whether through coding, engineering, robotics, chess, or pursuing aerospace and aviation interests.</p>
+          <p class="bash-out">I am driven by curiosity, discipline, and a commitment to develop both my technical skills and leadership capabilities.</p>
+          <p class="bash-out">Beyond academics, I enjoy engaging in extracurricular activities like football, solving puzzles, and creating innovative projects that expand my skillset and understanding of the world.</p>
+          <p class="bash-out">My ultimate goal is to combine creativity, technical mastery, and personal growth to excel in multiple fields including Computer Science, Aerospace Engineering, and Aviation.</p>
+          <p class="bash-cmd">$ <span class="bash-cursor">▊</span></p>
+        </div>
+      </aside>
+    </div>
+    </div>
+
+    <!-- ============================================================
+         ROTATING PROFILE & STRENGTHS CARDS — page-centered, arrows, 45s
+    ============================================================ -->
+    <div class="cards-block reveal">
+      <h2 class="cards-title">My Profile &amp; Strengths</h2>
+
+      <div class="cards-row">
+        <button class="cards-nav" id="cardsPrev" aria-label="Previous card">&#10094;</button>
+
+    <div class="wrap_card">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="content">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <span class="card-badge">Profile</span>
+            <div class="card-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="card-title">Mahmoud Ahmed Mobarak</h3>
+            <p class="card-desc">A Year 10 student at The Westminster School, Dubai — high-achieving, curious, and disciplined. I enjoy tackling complex challenges and applying knowledge in projects and real life.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-stat">Year 11 · Dubai</span>
+            <a href="#" class="card-btn">
+              Explore
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              <span class="btn-tip">✨ That's me — no filter, no edits.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="content">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <span class="card-badge">Strengths</span>
+            <div class="card-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="card-title">What I'm Best At</h3>
+            <p class="card-desc">Python programming, artificial intelligence, web development, robotics, and engineering — plus leadership, problem-solving, and a perfect 100% in Arabic for two consecutive years.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-stat">5+ Certifications</span>
+            <a href="#" class="card-btn">
+              Explore
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              <span class="btn-tip">⚡ 100% in Arabic — two years in a row.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="content">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <span class="card-badge">Passions</span>
+            <div class="card-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="card-title">What Drives Me</h3>
+            <p class="card-desc">Coding, engineering, robotics, chess, and football — with a deep fascination for aerospace and aviation. I love puzzles and building projects that turn ideas into reality.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-stat">Aerospace · Chess</span>
+            <a href="#" class="card-btn">
+              Explore
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              <span class="btn-tip">❤️ Chess, rockets & robots — the nerd starter pack.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="content">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <span class="card-badge">Goals</span>
+            <div class="card-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="card-title">My Ambition</h3>
+            <p class="card-desc">To combine creativity, technical mastery, and personal growth — and excel in Computer Science, Aerospace Engineering, and Aviation while lifting the standard around me.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-stat">CS · Aerospace</span>
+            <a href="#" class="card-btn">
+              Explore
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              <span class="btn-tip">🚀 To the stars — literally.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="content">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <span class="card-badge">Philosophy</span>
+            <div class="card-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0012 2z"></path></svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="card-title">How I Work</h3>
+            <p class="card-desc">Curiosity, discipline, and commitment. I believe leadership is built through consistent action — taking responsibility when it matters and staying true to my values under pressure.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-stat">Action over Words</span>
+            <a href="#" class="card-btn">
+              Explore
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              <span class="btn-tip">🧠 Action beats words. Always.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lines">
+        <div class="line"></div>
+      </div>
+    </div>
+
+        <button class="cards-nav" id="cardsNext" aria-label="Next card">&#10095;</button>
+      </div>
+    </div>
+
+      <!-- Hobbies & GitHub — glass card below the rotating cards -->
+      <div class="hobbies-card">
+        <h3>🏅 Hobbies & Interests</h3>
+        <p>Football | Coding | Engineering | Chess | Robotics</p>
+        <a class="hobbies-github" href="https://github.com/MahmoudMobarak" target="_blank">Check my GitHub →</a>
+      </div>
+  </section>
+
+
+  <!-- QUOTES -->
+  <section class="quotes-section reveal" id="quotes">
+    <h2 class="quotes-title">Quotes</h2>
+    <div class="quote-slideshow">
+      <button class="prev">&#10094;</button>
+      <div class="quote-bubble">
+        <p class="quote-text">“The only limit to our realization of tomorrow is our doubts of today.”</p>
+        <p class="quote-author">– Franklin D. Roosevelt</p>
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MY ROLE
+  ============================================================ -->
+  <section class="role-hero reveal" id="role">
+    <div class="role-hero-content">
+
+      <!-- Analytics window (style from Uiverse by bachira) holding the My Role text -->
+      <div class="analytics-window">
+        <div class="window-header">
+          <div class="header-left">
+            <div class="window-controls">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <h1 class="window-title">My Role as a student</h1>
+          </div>
+          <div class="header-right">
+            <div class="date-badge">Student Leader · Year 10</div>
+            <div class="privacy-toggle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>Privacy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <h2 class="role-window-title">More than participation — leadership through action</h2>
+
+          <div class="values-strip">
+            <span class="value-pill">Responsibility</span>
+            <span class="value-pill">Empathy</span>
+            <span class="value-pill">Service</span>
+            <span class="value-pill">Integrity</span>
+          </div>
+
+          <p class="role-window-text">
+            My role as a student is not limited to participation — it is defined by <strong>impact</strong>.
+            I approach every responsibility with the mindset of improving not only my own performance,
+            but the environment around me. Whether through leadership, collaboration, or initiative,
+            I aim to contribute in a way that is noticeable, meaningful, and lasting.
+            <br><br>
+            I believe leadership is built through consistent action — taking responsibility when it matters,
+            supporting others when it counts, and maintaining strong values even under pressure.
+            My goal is not just to succeed individually, but to <strong>elevate the standard</strong> of those around me.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SVG Lines connecting My Role window to Leadership Reflection and Book -->
+  <!-- ============================================================
+       HIERARCHY: My Role -> Leadership Reflection + Book -> Plan of Action
+  ============================================================ -->
+  <section class="hierarchy-section dark-bg reveal" id="hierarchy">
+
+    <!-- Top SVG Lines: My Role -> Leadership + Book -->
+    <div class="hierarchy-lines-container">
+      <svg class="hierarchy-lines" viewBox="0 0 1000 40" preserveAspectRatio="none">
+        <path d="M 500 0 C 500 20, 250 20, 250 40" stroke="url(#lineGradient1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 500 0 C 500 20, 750 20, 750 40" stroke="url(#lineGradient1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 500 0 C 500 20, 250 20, 250 40" stroke="rgba(99, 102, 241, 0.3)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M 500 0 C 500 20, 750 20, 750 40" stroke="rgba(99, 102, 241, 0.3)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2563eb"/>
+            <stop offset="100%" stop-color="#3b82f6"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- Two Boxes Side by Side -->
+    <div class="hierarchy-middle">
+
+      <!-- Left: Leadership Reflection -->
+      <div class="hierarchy-node leadership-node">
+        <h2 class="section-title text-center">Leadership Reflection</h2>
+        <p class="section-subtitle text-center">The core principles that guide my daily actions and decisions.</p>
+                <!-- Leadership Wallet -->
+        <div class="leadership-wallet">
+          <div class="lw-click-bubble">Click a card</div>
+          <div class="lw-wallet-back"></div>
+
+          <!-- Card 1: Vision -->
+          <div class="lw-card lw-vision" onclick="openCard(event, this)">
+            <div class="lw-card-inner">
+              <div class="lw-card-top">
+                <span>Vision</span>
+                <div class="lw-icon">🔭</div>
+              </div>
+              <div class="lw-card-bottom">
+                <div class="lw-card-info">
+                  <span class="lw-label">Core Trait</span>
+                  <span class="lw-value">FUTURE FOCUS</span>
+                </div>
+                <div class="lw-reflection-wrapper">
+                  <p class="lw-reflection-text">Guiding the team towards a shared, innovative goal with clarity and purpose.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Empathy -->
+          <div class="lw-card lw-empathy" onclick="openCard(event, this)">
+            <div class="lw-card-inner">
+              <div class="lw-card-top">
+                <span>Empathy</span>
+                <div class="lw-icon">🤝</div>
+              </div>
+              <div class="lw-card-bottom">
+                <div class="lw-card-info">
+                  <span class="lw-label">Core Trait</span>
+                  <span class="lw-value">UNDERSTANDING</span>
+                </div>
+                <div class="lw-reflection-wrapper">
+                  <p class="lw-reflection-text">Listening actively and valuing diverse perspectives to build strong team trust.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Resilience -->
+          <div class="lw-card lw-resilience" onclick="openCard(event, this)">
+            <div class="lw-card-inner">
+              <div class="lw-card-top">
+                <span>Resilience</span>
+                <div class="lw-icon">🛡️</div>
+              </div>
+              <div class="lw-card-bottom">
+                <div class="lw-card-info">
+                  <span class="lw-label">Core Trait</span>
+                  <span class="lw-value">ADAPTABILITY</span>
+                </div>
+                <div class="lw-reflection-wrapper">
+                  <p class="lw-reflection-text">Bouncing back from setbacks stronger and navigating challenges calmly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Integrity -->
+          <div class="lw-card lw-integrity" onclick="openCard(event, this)">
+            <div class="lw-card-inner">
+              <div class="lw-card-top">
+                <span>Integrity</span>
+                <div class="lw-icon">⚖️</div>
+              </div>
+              <div class="lw-card-bottom">
+                <div class="lw-card-info">
+                  <span class="lw-label">Core Trait</span>
+                  <span class="lw-value">HONESTY</span>
+                </div>
+                <div class="lw-reflection-wrapper">
+                  <p class="lw-reflection-text">Doing the right thing, taking accountability, and leading by true example.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Front Pocket -->
+          <div class="lw-pocket">
+            <svg class="lw-pocket-svg" viewBox="0 0 280 160" preserveAspectRatio="none" width="100%" height="100%" fill="none">
+              <path d="M 0 20 C 0 10, 5 10, 10 10 C 20 10, 25 25, 40 25 L 240 25 C 255 25, 260 10, 270 10 C 275 10, 280 10, 280 20 L 280 120 C 280 155, 260 160, 240 160 L 40 160 C 20 160, 0 155, 0 120 Z" fill="#1c2b36"></path>
+              <path d="M 8 22 C 8 16, 12 16, 15 16 C 23 16, 27 29, 40 29 L 240 29 C 253 29, 257 16, 265 16 C 268 16, 272 16, 272 22 L 272 120 C 272 150, 255 152, 240 152 L 40 152 C 25 152, 8 152, 8 120 Z" stroke="#2e4252" stroke-width="1.5" stroke-dasharray="6 4"></path>
+            </svg>
+            <div class="lw-pocket-content">
+              <div style="position: relative; height: 28px; width: 100%;">
+                <div class="lw-balance-stars">Self-Growth</div>
+                <div class="lw-balance-real">100% Potential</div>
+              </div>
+              <div style="color: #6a889c; font-size: 14px; font-weight: 500;">Leadership Portfolio</div>
+              <div class="lw-eye-icon-wrapper">
+                <svg class="lw-eye-icon lw-eye-slash" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <line x1="3" y1="3" x2="21" y2="21"></line>
+                </svg>
+                <svg class="lw-eye-icon lw-eye-open" style="opacity: 0;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Past Experiences Book -->
+      <div class="hierarchy-node book-node">
+        <h2 class="section-title text-center">Past Experiences</h2>
+        <p class="section-subtitle text-center">A glimpse into the journeys that shaped who I am.</p>
+        <section class="journey-section">
+          <div class="interactive-book-container">
+            <div class="book">
+              <div class="book-spine"></div>
+              <div class="book-cover-right"></div>
+              <div class="book-cover-left"></div>
+
+              <input type="checkbox" id="page1" class="page-toggle">
+              <label for="page1" class="page">
+                <div class="front">
+                  <div class="text-content">
+                    <h2>Past Experiences</h2>
+                    <p><strong>Introduction</strong></p>
+                    <p>Throughout my journey, I have accumulated diverse experiences that have shaped my character, values, and leadership style. Each experience — whether academic, extracurricular, or personal — has contributed to my growth.</p>
+                    <p>This book captures the key moments and lessons that define who I am today.</p>
+                    <span class="page-number">1</span>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="text-content">
+                    <h2>Responsibility</h2>
+                    <p>More than participation — leadership through action.</p>
+                    <p>I approach every responsibility with the mindset of improving not only my own performance, but the environment around me. Taking accountability when it matters, supporting others when it counts.</p>
+                    <p>My goal is not just to succeed individually, but to elevate the standard of those around me.</p>
+                    <span class="page-number">2</span>
+                  </div>
+                </div>
+              </label>
+
+              <input type="checkbox" id="page2" class="page-toggle">
+              <label for="page2" class="page">
+                <div class="front">
+                  <div class="text-content">
+                    <h2>Empathy</h2>
+                    <p>Understanding others to lead with heart.</p>
+                    <p>Listening actively and valuing diverse perspectives to build strong team trust. I believe that true leadership requires understanding the people around you and creating an environment where everyone feels heard.</p>
+                    <p>Whether through collaboration or initiative, empathy is the foundation of every meaningful connection I build.</p>
+                    <span class="page-number">3</span>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="text-content">
+                    <h2>Service</h2>
+                    <p>Giving back to elevate those around me.</p>
+                    <p>I aim to contribute in a way that creates lasting value. Service means stepping up when others need support, sharing knowledge generously, and always looking for ways to make a positive impact.</p>
+                    <p>Leadership is not about being in charge — it is about taking care of those in your charge.</p>
+                    <span class="page-number">4</span>
+                  </div>
+                </div>
+              </label>
+
+              <input type="checkbox" id="page3" class="page-toggle">
+              <label for="page3" class="page">
+                <div class="front">
+                  <div class="text-content">
+                    <h2>Integrity</h2>
+                    <p>Leading by example with unwavering honesty.</p>
+                    <p>Doing the right thing, taking accountability, and leading by true example. Leadership is built through consistent action — maintaining strong values even under pressure.</p>
+                    <p>I believe that integrity is not what we do when people are watching, but what we do when no one is around.</p>
+                    <span class="page-number">5</span>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="text-content">
+                    <h2>The Journey Continues</h2>
+                    <p>Every experience is a stepping stone to something greater.</p>
+                    <p>The values of responsibility, empathy, service, and integrity are not just words — they are the foundation of every decision I make and every goal I pursue.</p>
+                    <p>This is only the beginning.</p>
+                    <span class="page-number">6</span>
+                  </div>
+                </div>
+              </label>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+    <!-- Bottom SVG Lines: Both -> Plan of Action -->
+    <div class="hierarchy-lines-container bottom-lines">
+      <svg class="hierarchy-lines" viewBox="0 0 1000 40" preserveAspectRatio="none">
+        <path d="M 250 0 C 250 20, 500 20, 500 40" stroke="url(#lineGradient1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 750 0 C 750 20, 500 20, 500 40" stroke="url(#lineGradient1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 250 0 C 250 20, 500 20, 500 40" stroke="rgba(99, 102, 241, 0.3)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M 750 0 C 750 20, 500 20, 500 40" stroke="rgba(99, 102, 241, 0.3)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+
+    <!-- Plan of Action -->
+    <div class="section-container" style="width:100%;max-width:1000px;margin:0 auto;padding:30px 20px 50px;text-align:center;">
+      <h2 class="section-title" style="font-size:2.2rem;">Plan of Action</h2>
+      <p class="section-subtitle" style="color:var(--text-muted);font-size:1.05rem;margin-bottom:40px;">My roadmap for continued growth, leadership, and impact.</p>
+      <div class="vertical-timeline-container">
+        <div class="poa-timeline">
+          <div class="timeline-item">
+            <div class="timeline-node">01</div>
+            <div class="timeline-card">
+              <h4 class="timeline-title">Innovation</h4>
+              <p>I aim to encourage creative thinking by promoting student-led ideas and solutions. Innovation should not be limited — students should feel confident proposing and developing new concepts by introducing accessible technology into our daily school life —like using AI study aids and automation— to help students manage their workloads more efficiently and build essential digital skills.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-node">02</div>
+            <div class="timeline-card">
+              <h4 class="timeline-title">Inclusivity</h4>
+              <p>Every student should feel represented and heard. I will actively support inclusive participation, ensuring no one is overlooked or excluded from opportunities. One of my visions is to create a digital feedback system or platform where every student can easily share their ideas and concerns. This ensures that even the quietest voices are heard and included in school-wide decisions.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-node">03</div>
+            <div class="timeline-card">
+              <h4 class="timeline-title">Well-being</h4>
+              <p>Academic success should not come at the cost of well-being. I aim to promote balance, reduce unnecessary stress, and encourage a healthier, more positive school experience. By encouraging students to use their specific talents — like coding, design, or engineering — to solve real problems in our school and local community.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-node">04</div>
+            <div class="timeline-card">
+              <h4 class="timeline-title">Service</h4>
+              <p>I plan to contribute to initiatives that extend beyond the classroom, encouraging students to give back and develop a stronger sense of responsibility within the community. I am hoping I can organize STEM-focused workshops and creative projects that make learning more engaging. My goal is to encourage innovation while making sure these activities reduce stress rather than add to it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<section id="skills" style="padding: 100px 20px 80px;">
+    <h1 class="section-title" style="text-align:center;">Skills</h1>
+    <p class="academics-intro" style="text-align:center;">A snapshot of my core competencies across technology, academics, and leadership.</p>
+
+    <div class="skills-showcase" style="max-width:900px;margin:0 auto;">
+    <div class="skills-category">
+      <h3 class="skills-category-title">Technical</h3>
+      <div class="skills-row">
+        <div class="skill-chip"><span class="skill-dot" style="background:#60a5fa"></span>Python</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#60a5fa"></span>Artificial Intelligence</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#60a5fa"></span>HTML &amp; CSS</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#60a5fa"></span>Robotics</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#60a5fa"></span>System Design</div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3 class="skills-category-title">Academic</h3>
+      <div class="skills-row">
+        <div class="skill-chip"><span class="skill-dot" style="background:#34d399"></span>Analytical Thinking</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#34d399"></span>Mathematical Reasoning</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#34d399"></span>Research &amp; Self-Study</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#34d399"></span>Qur'an Memorization</div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3 class="skills-category-title">Leadership &amp; Soft Skills</h3>
+      <div class="skills-row">
+        <div class="skill-chip"><span class="skill-dot" style="background:#fb923c"></span>Leadership</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#fb923c"></span>Time Management</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#fb923c"></span>Discipline</div>
+        <div class="skill-chip"><span class="skill-dot" style="background:#fb923c"></span>Communication</div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+<section id="academic" style="padding:120px 20px 80px;">
+    <h1 class="section-title" style="text-align:center;">Academic Record</h1>
+    <p class="academics-intro" style="text-align:center;">Academic progress and performance records from Year 1 through Year 10.</p>
+    <div class="academic-box">
+    <div class="year-tabs">
+        <button class="year-tab active" data-year="1">Year 1</button>
+        <button class="year-tab" data-year="2">Year 2</button>
+        <button class="year-tab" data-year="3">Year 3</button>
+        <button class="year-tab" data-year="9">Year 9</button>
+        <button class="year-tab" data-year="10">Year 10</button>
+      </div>
+
+    <div class="report-cards-container">
+      <!-- Year 1 -->
+      <div class="report-card" data-year="1">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 1</span>
+          <h2>Year 1 - Final Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Final%20term%20year%201%20report%20card.jpg" alt="Year 1 - Final Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Final%20term%20year%201%20report%20card.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 2 -->
+      <div class="report-card" data-year="2">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 2</span>
+          <h2>Year 2 - First Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/First%20term%20Year%202%20report%20card.jpg" alt="Year 2 - First Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/First%20term%20Year%202%20report%20card.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 2 -->
+      <div class="report-card" data-year="2">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 2</span>
+          <h2>Year 2 - Second Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Second%20term%20year%202%20report%20card.jpg" alt="Year 2 - Second Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Second%20term%20year%202%20report%20card.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 2 -->
+      <div class="report-card" data-year="2">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 2</span>
+          <h2>Year 2 - Final Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Final%20Term%20year%202%20report%20card.jpg" alt="Year 2 - Final Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Final%20term%20year%202%20report%20card.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 3 -->
+      <div class="report-card" data-year="3">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 3</span>
+          <h2>Year 3 - First Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/First%20term%20Year%203%20report%20card.jpg" alt="Year 3 - First Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/First%20term%20Year%203%20report%20card.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 3 -->
+      <div class="report-card" data-year="3">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 3</span>
+          <h2>Year 3 - Second Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Second%20term%20year%203%20report%20card.jpg" alt="Year 3 - Second Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Second%20term%20year%203%20report%20card.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 3 -->
+      <div class="report-card" data-year="3">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 3</span>
+          <h2>Year 3 - Final Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Final%20term%20year%203%20report%20card.jpg" alt="Year 3 - Final Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Final%20term%20year%203%20report%20card.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 9 -->
+      <div class="report-card" data-year="9">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 9</span>
+          <h2>Year 9 - Mid Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Mid%20term%20report%20year%209.png" alt="Year 9 - Mid Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Mid-Term%20Report_academic_year%209.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 9 -->
+      <div class="report-card" data-year="9">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 9</span>
+          <h2>Year 9 - Second Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Second%20term%20report%20year%209.png" alt="Year 9 - Second Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Second%20Term%20Report_academic_Year%209.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 9 -->
+      <div class="report-card" data-year="9">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 9</span>
+          <h2>Year 9 - Final Report</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Final%20Report%20Year%209.png" alt="Year 9 - Final Report">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Final%20Report_academic_Year%209.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+      <!-- Year 10 -->
+      <div class="report-card" data-year="10">
+        <div class="report-card-head">
+          <span class="report-year-badge">Year 10</span>
+          <h2>Year 10 - Mid Term</h2>
+        </div>
+        <div class="report-images">
+          <img src="Report%20Cards/Photos/Mid%20Term%20report%20year%2010.png" alt="Year 10 - Mid Term">
+        </div>
+        <div class="pdf-link">
+          <a href="Report%20Cards/PDF/Mid-Term%20Report_academic_year%2010.pdf" target="_blank">Download PDF &rarr;</a>
+          <button type="button" class="report-zoom-btn">View Full Size &#128269;</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<section class="certificates reveal" id="certificates">
+    <h1 class="section-title" style="text-align:center;">Certificates</h1>
+    <p class="academics-intro" style="text-align:center;">A collection of certifications, awards, and achievements earned through dedication and consistent effort.</p>
+
+    <!-- AI & PROGRAMMING -->
+                        <div class="cert-category reveal">
+      <h2 class="section-title">AI &amp; Programming</h2>
+      <p class="category-desc">Technical certifications in artificial intelligence and programming.</p>
+      <div class="cert-grid">
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/AI-Level%201.jpg" alt="AI Level 1" loading="lazy">
+          </div>
+          <h3>AI Level 1</h3>
+          <p class="cert-desc">Foundational artificial intelligence course covering core concepts, terminology, and hands-on exercises.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/AI-Level%202.jpg" alt="AI Level 2" loading="lazy">
+          </div>
+          <h3>AI Level 2</h3>
+          <p class="cert-desc">Built on Level 1 with deeper model training, data handling, and practical AI applications.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/AI-Level%203.jpg" alt="AI Level 3" loading="lazy">
+          </div>
+          <h3>AI Level 3</h3>
+          <p class="cert-desc">Advanced AI coursework — designing and evaluating models on real datasets.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/AI-Level%204.jpg" alt="AI Level 4" loading="lazy">
+          </div>
+          <h3>AI Level 4</h3>
+          <p class="cert-desc">Top-level AI certification, completing the full program series.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Python%20Programming.jpg" alt="Python Programming" loading="lazy">
+          </div>
+          <h3>Python Programming</h3>
+          <p class="cert-desc">Certified Python proficiency — syntax, data structures, and problem-solving.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Html,css%20programming.jpg" alt="HTML &amp; CSS Programming" loading="lazy">
+          </div>
+          <h3>HTML &amp; CSS Programming</h3>
+          <p class="cert-desc">Web fundamentals certification covering semantic HTML and modern CSS layouts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-category reveal">
+      <h2 class="section-title">Robotics &amp; STEM</h2>
+      <p class="category-desc">Competitions, exhibitions, and hands-on STEM experience.</p>
+      <div class="cert-grid">
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/FLL%20LEGO%202026.jpg" alt="FLL LEGO 2026" loading="lazy">
+          </div>
+          <h3>FLL LEGO 2026</h3>
+          <p class="cert-desc">First LEGO League 2026 competitor — designing, building, and programming autonomous LEGO robots.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/FLL-Participation.jpg" alt="FLL Participation" loading="lazy">
+          </div>
+          <h3>FLL Participation</h3>
+          <p class="cert-desc">Recognized participation in the First LEGO League robotics competition.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Contribution%20in%20Physics%20Exhibition.jpg" alt="Physics Exhibition" loading="lazy">
+          </div>
+          <h3>Physics Exhibition</h3>
+          <p class="cert-desc">Contributed an exhibited project to the school Physics Exhibition.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Organic%20Expo%20Participation.jpg" alt="Organic Expo Participation" loading="lazy">
+          </div>
+          <h3>Organic Expo Participation</h3>
+          <p class="cert-desc">Presented sustainable innovations at the Organic Expo.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/2nd%20place%20in%20GLOBEX.jpg" alt="2nd Place in GLOBEX" loading="lazy">
+          </div>
+          <h3>2nd Place in GLOBEX</h3>
+          <p class="cert-desc">Second place at the GLOBEX competition with an engineering project.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-category reveal">
+      <h2 class="section-title">Academic Achievements</h2>
+      <p class="category-desc">Top placements and academic excellence awards.</p>
+      <div class="cert-grid">
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Star%20student%20for%20maths%202025.jpg" alt="Star Student - Maths 2025" loading="lazy">
+          </div>
+          <h3>Star Student - Maths 2025</h3>
+          <p class="cert-desc">Awarded Star Student for outstanding performance in Mathematics.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Star%20student%20March%20Year%205.jpg" alt="Star Student - March Year 5" loading="lazy">
+          </div>
+          <h3>Star Student - March Year 5</h3>
+          <p class="cert-desc">Named Star Student in March of Year 5 for overall excellence.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Star%20Student%20November%202021%20Year%206.jpg" alt="Star Student - November Year 6" loading="lazy">
+          </div>
+          <h3>Star Student - November Year 6</h3>
+          <p class="cert-desc">Named Star Student in November of Year 6 for overall excellence.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/450%20Points.png" alt="450 Points Achievement" loading="lazy">
+          </div>
+          <h3>450 Points Achievement</h3>
+          <p class="cert-desc">Reached the 450-point achievement milestone.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/2nd%20position%20in%20garde%202.jpg" alt="2nd Position - Grade 2" loading="lazy">
+          </div>
+          <h3>2nd Position - Grade 2</h3>
+          <p class="cert-desc">Finished Grade 2 in 2nd position academically.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/4Th%20Postion%20in%20garde%201.jpg" alt="4th Position - Grade 1" loading="lazy">
+          </div>
+          <h3>4th Position - Grade 1</h3>
+          <p class="cert-desc">Finished Grade 1 in 4th position academically.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/5Th%20postion%20in%20second%20term%20exams%20in%20garde%201.jpg" alt="5th Position - Grade 1 Second Term" loading="lazy">
+          </div>
+          <h3>5th Position - Grade 1 Second Term</h3>
+          <p class="cert-desc">Finished Grade 1 second term in 5th position.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Achieve%203000%20Reading%20Achievement.jpg" alt="3000 Reading Achievement" loading="lazy">
+          </div>
+          <h3>3000 Reading Achievement</h3>
+          <p class="cert-desc">Read 3,000 pages as part of the school reading program.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-category reveal">
+      <h2 class="section-title">Dedication &amp; Excellence</h2>
+      <p class="category-desc">Recognition for punctuality, attendance, and conduct.</p>
+      <div class="cert-grid">
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/100%20Attendance%20year%207.jpg" alt="100% Attendance - Year 7" loading="lazy">
+          </div>
+          <h3>100% Attendance - Year 7</h3>
+          <p class="cert-desc">Perfect attendance across the whole of Year 7.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/100%25%20Attendance%20Certificate-January-2025.jpg" alt="100% Attendance - 2025" loading="lazy">
+          </div>
+          <h3>100% Attendance - 2025</h3>
+          <p class="cert-desc">Perfect attendance for the 2025 academic year.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Certificate%20of%20Apperciation-100%20Punctuality.jpg" alt="100 Punctuality Certificate" loading="lazy">
+          </div>
+          <h3>100 Punctuality Certificate</h3>
+          <p class="cert-desc">Recognized for consistently punctual arrival across the term.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Be%20A%20GEM%20Rewards%20Postcards_300P.jpeg" alt="GEM Rewards - 300 Points" loading="lazy">
+          </div>
+          <h3>GEM Rewards - 300 Points</h3>
+          <p class="cert-desc">Earned 300 GEM reward points for positive behavior and effort.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Be%20A%20GEM%20Rewards%20Postcards_50P.jpg" alt="GEM Rewards - 50 Points" loading="lazy">
+          </div>
+          <h3>GEM Rewards - 50 Points</h3>
+          <p class="cert-desc">Earned 50 GEM reward points for positive behavior and effort.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Smartly%20Dressed%20in%20Year%206.jpg" alt="Smartly Dressed - Year 6" loading="lazy">
+          </div>
+          <h3>Smartly Dressed - Year 6</h3>
+          <p class="cert-desc">Recognized for uniform excellence throughout Year 6.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/SOM-Mahmoud%20Jan-10B1_page-0001.jpg" alt="Student of the Month" loading="lazy">
+          </div>
+          <h3>Student of the Month</h3>
+          <p class="cert-desc">Named Student of the Month for outstanding conduct and achievement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-category reveal">
+      <h2 class="section-title">Quran &amp; Arabic</h2>
+      <p class="category-desc">Religious and language achievements.</p>
+      <div class="cert-grid">
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/Hifz%20Quran.jpg" alt="Hifz Quran" loading="lazy">
+          </div>
+          <h3>Hifz Quran</h3>
+          <p class="cert-desc">Memorization achievement in the Quran Hifz program.</p>
+        </div>
+        <div class="cert-card" tabindex="0">
+          <div class="cert-photo-wrap">
+            <img src="Certificate/2%20Consective%20year%20100%20in%20arabic.jpg" alt="2 Consecutive Years - 100 in Arabic" loading="lazy">
+          </div>
+          <h3>2 Consecutive Years - 100 in Arabic</h3>
+          <p class="cert-desc">Scored a perfect 100 in Arabic for two consecutive years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ============================================================
+       SKILLS
+  ============================================================ -->
+
+
+
+  
+
+  
+
+  <section class="final-statement-section reveal">
+    <div class="final-statement-box">
+      <h2 class="accent-title">The Commitment</h2>
+      <p>
+        "I do not aim to simply hold a role — I aim to define it through action.
+        By combining discipline, awareness, and initiative, I will contribute in a way
+        that creates lasting value and sets a higher standard for others to follow."
+      </p>
+    </div>
+  </section>
+
+  
+
+  <!-- ============================================================
+       PROJECTS
+  ============================================================ -->
+  <section class="projects reveal" id="projects">
+    <h1 class="section-title">Projects</h1>
+    <p class="academics-intro">
+      A collection of my projects demonstrating programming, AI, robotics, web development, and engineering skills.
+    </p>
+
+    <div class="projects-list">
+      <!-- PROJECT: House Price Predictor -->
+      <div class="project-row reveal">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">House Price Predictor: ML Regression Model</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Project%20Linear%20hose%20price%20predictor.jpg" alt="House Price Predictor">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">House Price Predictor</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">A machine learning project built with Python and Scikit-Learn that predicts house prices based on various features such as location, size, and amenities.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Built a machine learning model with Python and Scikit-Learn that predicts house prices from features like location, size, and amenities.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Cleaned and engineered real housing datasets to improve prediction accuracy.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Evaluated multiple regression algorithms and selected the strongest performer.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Python</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Scikit-Learn</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Machine Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Cat vs Dog Classifier -->
+      <div class="project-row reveal project-row--flip">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Cat vs Dog Classifier: Deep Learning Vision</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Cat%20and%20dog%20Classifier.jpg" alt="Cat vs Dog Classifier">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">Cat vs Dog Classifier</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">A deep learning computer vision model built using TensorFlow and Keras to classify images of cats and dogs with high accuracy.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Developed a computer vision model using TensorFlow and Keras to classify images of cats and dogs with high accuracy.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Trained convolutional neural networks with data augmentation for robust results.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Processed and prepared hundreds of labeled training images.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Python</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>TensorFlow</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Computer Vision</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Liver Cancer Predictor -->
+      <div class="project-row reveal">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Liver Cancer Predictor: Healthcare AI</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Liver%20cancer%20Predictor%20.jpg" alt="Liver Cancer Predictor">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">Liver Cancer Predictor</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">A healthcare AI project using machine learning algorithms to assist in the early prediction and classification of liver cancer from patient data.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Created a healthcare AI project using machine learning to assist early prediction and classification of liver cancer from patient data.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Focused on responsible, data-driven decision support for medical screening.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Compared multiple classification algorithms to find the most reliable results.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Python</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Healthcare AI</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Data Science</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Mahmoud Mobarak Portfolio -->
+      <div class="project-row reveal project-row--flip">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Mahmoud Mobarak Portfolio: Personal Website</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Mahmoud%20Mobarak%20Portfolio.png" alt="Mahmoud Mobarak Portfolio">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">Mahmoud Mobarak Portfolio</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">A fully responsive personal portfolio website built using HTML, CSS, and JavaScript to showcase my academic achievements, projects, certifications, and extracurricular activities.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Designed and built a fully responsive personal portfolio using HTML, CSS, and JavaScript.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Includes custom creations: a 3D flip book, animated wallet cards, and an interactive hierarchy diagram.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Runs as a fully static site with a local admin panel for easy content management.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>HTML</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>CSS</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Homemade Water Filter -->
+      <div class="project-row reveal">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Homemade Water Filter: Engineering Project</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Homemade%20Water%20Filter%20Photo.jpeg" alt="Homemade Water Filter">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">Homemade Water Filter</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">Designed and built a working homemade water filter using layered natural materials to demonstrate basic water purification principles.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Designed and built a working water filter using layered household materials.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Tested filtration effectiveness across multiple design iterations.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Applied engineering design thinking to a real-world sustainability problem.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>STEM</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Engineering</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Environmental</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Solar Panel Model -->
+      <div class="project-row reveal project-row--flip">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Solar Panel Model: Renewable Energy</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Solar%20Pannel%20Model%20Photo.png" alt="Solar Panel Model">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">Solar Panel Model</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">A hands-on engineering project demonstrating clean energy conversion using solar cells, exploring renewable energy principles.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Constructed a working solar panel model demonstrating renewable energy conversion.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Measured and compared energy output under different light conditions.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Presented the project at a school science exhibition.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Renewable Energy</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Solar</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Lingua Mystica -->
+      <div class="project-row reveal">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">Lingua Mystica: Language Learning Concept</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Lingua-mystica.png" alt="Lingua Mystica">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">Lingua Mystica</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">An interactive ancient script decoder and linguistic exploration tool exploring cipher systems and historic writing methods.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Created a language-learning concept exploring creative approaches to mastering new languages.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Combined spaced repetition with gamified practice techniques.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Designed the user experience and learning flow from scratch.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>JavaScript</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Cryptography</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: KeyCraft E-commerce -->
+      <div class="project-row reveal project-row--flip">
+        <div class="project-card-visual">
+          <div class="project-glow"></div>
+          <div class="project-card-inner">
+            <h2 class="project-card-title">KeyCraft: E-commerce Storefront</h2>
+            <div class="project-browser">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-content">
+                <img src="Photos/Keycraft_photo.png" alt="KeyCraft E-commerce">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-header">
+            <div class="project-accent-bar"></div>
+            <h3 class="project-details-title">KeyCraft E-commerce</h3>
+          <a href="#" class="project-link">Check out
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          </div>
+          <p class="project-details-desc">A modern, responsive e-commerce web concept for custom keychains with cart functionality and interactive product catalog.</p>
+          <ul class="project-points">
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Built an e-commerce concept store around keyboard products with a modern storefront.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Designed product pages, cart flow, and fully responsive layouts.</p>
+            </li>
+            <li class="project-point">
+              <span class="project-point-plus">+</span>
+              <p>Focused on clean UI and conversion-friendly design patterns.</p>
+            </li>
+          </ul>
+          <div class="project-badges">
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>Web Development</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>E-Commerce</span>
+          <span class="project-badge"><span class="project-badge-dot" style="background:#818cf8"></span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXTRACURRICULARS
+  ============================================================ -->
+  <section class="extracurriculars reveal" id="extracurriculars">
+    <h1 class="section-title">Extracurricular Activities</h1>
+    <p class="academics-intro">
+      Here’s a collection of extracurricular activities I’ve participated in to enhance my skills, leadership, and teamwork abilities outside the classroom.
+    </p>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="extra-grid">
+      <div class="extra-card reveal">
+        <figure class="extra-photo">
+          <img src="Photos/FLL-Photo-1.png" alt="Robotics Program - FLL">
+          <div class="extra-tags">
+            <span class="glass-tag">Robotics</span>
+            <span class="glass-tag">Coding</span>
+            <span class="glass-tag">Teamwork</span>
+          </div>
+        </figure>
+        <div class="extra-body">
+          <h3>Robotics Program - FLL</h3>
+          <p class="extra-lead">Where code meets creation — building robots that think.</p>
+          <p class="extra-desc">As an active member of the school's First LEGO League (FLL) robotics team, I spend the season designing, building, and programming autonomous LEGO robots. Beyond the robot itself, I work on the innovation project side — researching real-world problems and pitching creative solutions to judges. The program has taught me how engineering, coding, and teamwork come together under real competition pressure.</p>
+          <ul class="extra-points">
+            <li class="extra-point">Programmed autonomous robots using sensor-based navigation and mission strategy.</li>
+            <li class="extra-point">Collaborated with teammates to brainstorm, prototype, and test robot designs across the season.</li>
+            <li class="extra-point">Presented our innovation project and robot design directly to FLL judges.</li>
+            <li class="extra-point">Learned to stay calm and iterate fast when missions fail mid-competition.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="extra-card reveal">
+        <figure class="extra-photo">
+          <img src="Photos/Physics%20Exhibition%20Photo.jpeg" alt="Physics Exhibition">
+          <div class="extra-tags">
+            <span class="glass-tag">Science</span>
+            <span class="glass-tag">Presentation</span>
+            <span class="glass-tag">Physics</span>
+          </div>
+        </figure>
+        <div class="extra-body">
+          <h3>Physics Exhibition</h3>
+          <p class="extra-lead">Turning abstract equations into experiments people can touch.</p>
+          <p class="extra-desc">At the school Physics Exhibition, I designed and presented working scientific models that demonstrate core physical principles — turning textbook theory into something visitors can see, touch, and question. Explaining complex ideas to audiences of every age sharpened my ability to communicate science clearly and confidently.</p>
+          <ul class="extra-points">
+            <li class="extra-point">Built interactive demonstration models explaining core physics principles.</li>
+            <li class="extra-point">Presented to hundreds of visiting students and faculty across the exhibition.</li>
+            <li class="extra-point">Answered spontaneous deep-dive questions from teachers and judges.</li>
+            <li class="extra-point">Translated abstract equations into visual, hands-on experiences.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="extra-card reveal">
+        <figure class="extra-photo">
+          <img src="Photos/Organic%20Expo%20photo%201.jpg" alt="Organic Expo">
+          <div class="extra-tags">
+            <span class="glass-tag">Sustainability</span>
+            <span class="glass-tag">Innovation</span>
+            <span class="glass-tag">Environment</span>
+          </div>
+        </figure>
+        <div class="extra-body">
+          <h3>Organic Expo</h3>
+          <p class="extra-lead">Innovation with a conscience — engineering for a greener future.</p>
+          <p class="extra-desc">Representing sustainable thinking at the Organic Expo, I presented eco-friendly innovations and organic solutions to industry visitors and judges. The expo pushed me to think about how engineering choices affect the environment, and how small design decisions can make products dramatically more sustainable.</p>
+          <ul class="extra-points">
+            <li class="extra-point">Presented sustainable innovations to industry visitors and expo judges.</li>
+            <li class="extra-point">Researched the eco-friendly materials and processes behind our showcased solutions.</li>
+            <li class="extra-point">Discussed real-world sustainability trade-offs with professionals.</li>
+            <li class="extra-point">Represented the school at a public-facing environmental event.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="extra-card reveal">
+        <figure class="extra-photo">
+          <img src="Photos/Globex%20photo%201.jpg" alt="Globex Competition">
+          <div class="extra-tags">
+            <span class="glass-tag">Engineering</span>
+            <span class="glass-tag">2nd Place</span>
+            <span class="glass-tag">STEM</span>
+          </div>
+        </figure>
+        <div class="extra-body">
+          <h3>Globex Competition</h3>
+          <p class="extra-lead">From a homemade filter to a judged engineering stage.</p>
+          <p class="extra-desc">At the Globex competition, I presented a homemade water filter built from layered natural and household materials, demonstrating how basic engineering design can tackle real water-purification problems. The project earned 2nd place and taught me how to take an idea from rough prototype to a judged, professional presentation.</p>
+          <ul class="extra-points">
+            <li class="extra-point">Designed and built a layered water filter demonstrating real purification principles.</li>
+            <li class="extra-point">Earned 2nd place among competitive STEM project entries.</li>
+            <li class="extra-point">Explained filtration science and design iterations to the judging panel.</li>
+            <li class="extra-point">Took a project from concept to prototype to tested to presented.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section class="contact-page reveal" id="contact">
+    <h1 class="section-title">Contact Me</h1>
+    <p class="academics-intro">
+      Have a question or want to collaborate? Send me a message, and I’ll try to respond as fast as possible!(work in progress)
+    </p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Let's connect</h3>
+        <p>Whether it's a project idea, a competition, or just a question — my inbox is always open.</p>
+        <a class="contact-info-item" href="mailto:mahmoud@example.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email me directly
+        </a>
+        <a class="contact-info-item" href="#projects">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          See my work on GitHub
+        </a>
+        <a class="contact-info-item" href="#certificates">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13l1.5 8-5-3-5 3 1.5-8"/></svg>
+          View my certificates
+        </a>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="input-group">
+          <input type="text" name="firstName" placeholder="First Name" required>
+          <input type="text" name="lastName" placeholder="Last Name" required>
+        </div>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+        <div class="confirmation-message">Your message has been sent!</div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact-footer">
+  <div class="footer-center">
+    <p>@2025 Mahmoud Ahmed Mobarak</p>
+  </div>
+</footer>
+
+<!-- POPUP CONFIRMATION -->
+<div class="confirmation-popup" id="confirmationPopup">
+  <div class="popup-content">
+    <h2>Message Sent!</h2>
+    <p>Thank you for contacting me. I’ll try to respond as fast as possible.</p>
+    <button id="closePopup">Close</button>
+  </div>
+</div>
+
+<!-- IMAGE LIGHTBOX / FULL-SIZE PREVIEW -->
+<div class="image-lightbox" id="imageLightbox" aria-hidden="true" role="dialog">
+  <div class="lightbox-overlay" id="lightboxOverlay"></div>
+  <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+  <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+  <div class="lightbox-container">
+    <span class="lightbox-counter" id="lightboxCounter"></span>
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged preview">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init("wFE7Ll5cDKSxM4Zfs"); // your Public Key
+</script>
+<script src="script.js"></script>
+</body>
+</html>

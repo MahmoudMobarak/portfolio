@@ -1,0 +1,30 @@
+# System / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+npm-debug.log*
+
+# Dependencies (none needed — admin server uses Node built-ins only)
+node_modules/
+
+# Local admin runtime state
+admin/*.log
+
+# OS temporary files
+*.tmp
+*.bak
+*~
+
+# ------------------------------------------------------------------
+# TEMPORARY: these 4 PDFs are permission-locked by Windows (read denied),
+# so Git cannot include them. To fix: right-click each file in Explorer →
+# Properties → Security tab → give your user "Read" permission (or
+# General tab → Unblock). Then DELETE the lines below and run:
+#   git add "Report Cards/PDF"
+#   git commit -m "Add locked report card PDFs"
+# ------------------------------------------------------------------
+Report Cards/PDF/Final Report_academic_Year 9.pdf
+Report Cards/PDF/Mid-Term Report_academic_Year 9.pdf
+Report Cards/PDF/Mid-Term Report_academic_year 10.pdf
+Report Cards/PDF/Second Term Report_academic_Year 9.pdf

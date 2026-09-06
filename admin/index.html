@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud Mobarak Portfolio - Admin Panel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="admin-header">
+    <div class="brand">
+      <div class="brand-badge">ADMIN</div>
+      <div class="brand-text">
+        <h1>Mahmoud Mobarak</h1>
+        <span>Portfolio Content Manager</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="status-indicator" id="saveStatus">Synced with static site</span>
+      <a href="/" target="_blank" class="btn btn-secondary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        Preview Portfolio
+      </a>
+      <button id="saveBtn" class="btn btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2zM17 21v-8H7v8M7 3v5h8"/></svg>
+        Save All Changes
+      </button>
+        <button id="pushBtn" class="btn btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2zM17 21v-8H7v8M7 3v5h8"/>
+          </svg>
+          Push to GitHub
+        </button>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+    <!-- Sidebar Navigation Tabs -->
+    <aside class="admin-sidebar">
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="hero">
+          <span class="nav-icon">👤</span> Profile &amp; Bio
+        </button>
+        <button class="nav-item" data-tab="academic">
+          <span class="nav-icon">🎓</span> Academic Report Cards
+        </button>
+        <button class="nav-item" data-tab="certificates">
+          <span class="nav-icon">📜</span> Certificates
+        </button>
+        <button class="nav-item" data-tab="projects">
+          <span class="nav-icon">🚀</span> Projects
+        </button>
+        <button class="nav-item" data-tab="extracurriculars">
+          <span class="nav-icon">⚽</span> Extracurriculars
+        </button>
+        <button class="nav-item" data-tab="skills">
+          <span class="nav-icon">⚡</span> Skills
+        </button>
+        <button class="nav-item" data-tab="tutorial">
+          <span class="nav-icon">📘</span> Tutorial &amp; Git Guide
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <p class="hosting-note">
+          <strong>GitHub Pages Ready:</strong> All edits update <code>portfolio-data.json</code> and directly sync into <code>index.html</code>.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+
+      <!-- TAB 1: Profile & Bio -->
+      <section class="tab-panel active" id="tab-hero">
+        <div class="panel-header">
+          <h2>Profile &amp; Hero Section</h2>
+          <p>Edit your name, subtitle, profile image, and the introductory bash terminal text.</p>
+        </div>
+
+        <div class="form-card">
+          <h3>Basic Details</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="heroName">Full Name</label>
+              <input type="text" id="heroName" class="form-input" placeholder="e.g. Mahmoud Ahmed Mobarak">
+            </div>
+            <div class="form-group">
+              <label for="heroSubtitle">Subtitle / School Info</label>
+              <input type="text" id="heroSubtitle" class="form-input" placeholder="e.g. A Year 10 Student at The Westminster School, Dubai">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Profile Photo</label>
+            <div class="image-picker-row">
+              <img id="heroPhotoPreview" src="" alt="Profile Preview" class="preview-avatar">
+              <div class="image-picker-controls">
+                <input type="text" id="heroPhotoPath" class="form-input" placeholder="Photos/Mahmoud-Mobarak-Photo.png" readonly>
+                <label class="btn btn-outline upload-btn">
+                  Upload New Photo
+                  <input type="file" id="heroPhotoUpload" accept="image/*" style="display:none;">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Bash Terminal Paragraphs</h3>
+          <p class="card-hint">These lines display inside the terminal on the About Me landing section.</p>
+          <div id="bashLinesContainer" class="dynamic-list"></div>
+          <button type="button" id="addBashLineBtn" class="btn btn-sm btn-outline">+ Add Paragraph</button>
+        </div>
+      </section>
+
+      <!-- TAB 2: Academic Report Cards -->
+      <section class="tab-panel" id="tab-academic">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h2>Academic Record &amp; Report Cards</h2>
+            <p>Manage individual term report cards. Each card displays side-by-side horizontally in its selected year.</p>
+          </div>
+          <button type="button" id="addReportCardBtn" class="btn btn-primary">+ Add New Report Card</button>
+        </div>
+
+        <div class="filter-bar">
+          <label>Filter by Year:</label>
+          <select id="adminYearFilter" class="form-select">
+            <option value="all">All Years</option>
+          </select>
+        </div>
+
+        <div class="form-card">
+          <h3>Year Tabs (Academic Record)</h3>
+          <p class="card-hint">These become the year buttons on the website. Removing a year removes its tab (existing report cards keep their year label). Add a year here first, then add report cards to it.</p>
+          <div id="yearManagerRow" class="tags-editor"></div>
+          <div class="add-tag-row">
+            <input type="text" id="newReportYearInput" class="form-input" placeholder="e.g. 11">
+            <button type="button" id="addReportYearBtn" class="btn btn-sm btn-outline">Add Year</button>
+          </div>
+        </div>
+
+        <div id="reportCardsList" class="cards-admin-grid"></div>
+      </section>
+
+      <!-- TAB 3: Certificates -->
+      <section class="tab-panel" id="tab-certificates">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h2>Certificates &amp; Achievements</h2>
+            <p>Add, edit, or delete certificates and awards across categories.</p>
+          </div>
+          <button type="button" id="addCertBtn" class="btn btn-primary">+ Add New Certificate</button>
+        </div>
+
+        <div id="certificatesList" class="cards-admin-grid"></div>
+      </section>
+
+      <!-- TAB 4: Projects -->
+      <section class="tab-panel" id="tab-projects">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h2>Featured Projects</h2>
+            <p>Manage your machine learning, web, AI, and engineering projects.</p>
+          </div>
+          <button type="button" id="addProjectBtn" class="btn btn-primary">+ Add New Project</button>
+        </div>
+
+        <div id="projectsList" class="cards-admin-grid"></div>
+      </section>
+
+      <!-- TAB 5: Extracurriculars -->
+      <section class="tab-panel" id="tab-extracurriculars">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h2>Extracurricular Activities</h2>
+            <p>Manage exhibitions, competitions, robotics, and sports experiences.</p>
+          </div>
+          <button type="button" id="addExtraBtn" class="btn btn-primary">+ Add Activity</button>
+        </div>
+
+        <div id="extracurricularsList" class="cards-admin-grid"></div>
+      </section>
+
+      <!-- TAB 6: Skills -->
+      <section class="tab-panel" id="tab-skills">
+        <div class="panel-header">
+          <h2>Skills &amp; Competencies</h2>
+          <p>Add and manage your skills chips grouped by category.</p>
+        </div>
+
+        <div class="form-card">
+          <h3>Technical Skills</h3>
+          <div id="techSkillsContainer" class="tags-editor"></div>
+          <div class="add-tag-row">
+            <input type="text" id="newTechSkillInput" class="form-input" placeholder="e.g. Python">
+            <button type="button" id="addTechSkillBtn" class="btn btn-sm btn-outline">Add Skill</button>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Academic Skills</h3>
+          <div id="acadSkillsContainer" class="tags-editor"></div>
+          <div class="add-tag-row">
+            <input type="text" id="newAcadSkillInput" class="form-input" placeholder="e.g. Analytical Thinking">
+            <button type="button" id="addAcadSkillBtn" class="btn btn-sm btn-outline">Add Skill</button>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Leadership &amp; Soft Skills</h3>
+          <div id="softSkillsContainer" class="tags-editor"></div>
+          <div class="add-tag-row">
+            <input type="text" id="newSoftSkillInput" class="form-input" placeholder="e.g. Leadership">
+            <button type="button" id="addSoftSkillBtn" class="btn btn-sm btn-outline">Add Skill</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 7: Tutorial -->
+      <section class="tab-panel" id="tab-tutorial">
+        <div class="panel-header">
+          <h2>Tutorial — Editing Everything &amp; Committing to GitHub</h2>
+          <p>How to use this panel for every section, and how to get your changes onto GitHub Pages.</p>
+        </div>
+
+        <div class="tutorial-accordion">
+
+          <div class="tutorial-item open">
+            <button type="button" class="tutorial-head">1 · The basics — edit, save, verify</button>
+            <div class="tutorial-body">
+              <ol>
+                <li>Pick a tab on the left (Profile, Report Cards, Certificates, Projects, Extracurriculars, Skills).</li>
+                <li>Edit the fields — every change is tracked in memory instantly.</li>
+                <li>Click <strong>Save All Changes</strong> (top right). This writes <code>portfolio-data.json</code> AND regenerates <code>index.html</code> automatically.</li>
+                <li>Click <strong>Preview Portfolio</strong> (top right) to check the live site, then hard-refresh with <strong>Ctrl+Shift+R</strong>.</li>
+              </ol>
+              <p><strong>Nothing is public until you commit &amp; push to GitHub</strong> — see step 6.</p>
+            </div>
+          </div>
+
+          <div class="tutorial-item">
+            <button type="button" class="tutorial-head">2 · Report cards &amp; year tabs</button>
+            <div class="tutorial-body">
+              <ul>
+                <li><strong>Add a new grade/year:</strong> Academic Report Cards tab → "Year Tabs" card → type the year (e.g. <code>11</code>) → <strong>Add Year</strong> → <strong>+ Add New Report Card</strong> → set its Academic Year to <code>11</code>.</li>
+                <li>Upload the report card <strong>image</strong> (JPG/PNG) and the <strong>PDF</strong> separately — the image shows on the site, the PDF powers the "Download PDF" link.</li>
+                <li><strong>Remove a year:</strong> click the × on its chip in the Year Tabs card. Report cards of that year keep their label but lose the tab.</li>
+                <li>Use the <strong>Filter by Year</strong> dropdown to see only one year's cards while editing.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tutorial-item">
+            <button type="button" class="tutorial-head">3 · Certificates — categories, tags, links</button>
+            <div class="tutorial-body">
+              <ul>
+                <li><strong>New category:</strong> just type a new category name on any certificate (e.g. <code>Sports</code>) — the website groups categories automatically.</li>
+                <li>Each certificate has <strong>title, description, tags</strong> (glass chips on the photo), an optional <strong>link</strong> (verification/PDF), and the photo upload.</li>
+                <li><strong>Remove:</strong> the Delete button on the card. <strong>Add:</strong> the "+ Add New Certificate" button.</li>
+                <li>On the site, hover a certificate to expand it and click it to open the big reader view with ←/→ arrows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tutorial-item">
+            <button type="button" class="tutorial-head">4 · Projects, activities &amp; skills</button>
+            <div class="tutorial-body">
+              <ul>
+                <li><strong>Projects:</strong> title, card title, description, feature points (one per line), tech tags, screenshot, optional live URL + GitHub URL, and a checkbox to show/hide the "Check out" button.</li>
+                <li><strong>Extracurriculars:</strong> title, lead line (the short italic hook), description, tags (chips on the photo), photo.</li>
+                <li><strong>Skills:</strong> three categories of chips — type in the box, press Add Skill. Click × on a chip to remove it.</li>
+                <li>Every list can be <strong>added to, edited, or deleted</strong> — the site regenerates on save.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tutorial-item">
+            <button type="button" class="tutorial-head">5 · Uploading files — what goes where</button>
+            <div class="tutorial-body">
+              <ul>
+                <li><code>Photos/</code> — project screenshots and activity photos</li>
+                <li><code>Certificate/</code> — certificate scans</li>
+                <li><code>Report Cards/Photos/</code> — report card images</li>
+                <li><code>Report Cards/PDF/</code> — report card PDFs</li>
+              </ul>
+              <p>The upload buttons inside each editor put files in the right folder automatically — prefer them over manual file management.</p>
+            </div>
+          </div>
+
+          <div class="tutorial-item">
+            <button type="button" class="tutorial-head">6 · Committing &amp; pushing to GitHub</button>
+            <div class="tutorial-body">
+              <p><strong>One-click way:</strong> after saving, press <strong>Push to GitHub</strong> (top right). It runs the equivalent of <code>git add . → git commit → git push</code> for you. The first time ever, push from a terminal instead (see below) so Git knows who you are.</p>
+              <p><strong>Terminal way (full control):</strong></p>
+              <div class="tutorial-code"><code>git add .
+git commit -m "Update portfolio content"
+git push</code><button type="button" class="tutorial-copy">Copy</button></div>
+              <p><strong>First-time setup (once per computer):</strong></p>
+              <div class="tutorial-code"><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git remote add origin https://github.com/USERNAME/REPO.git
+git push -u origin main</code><button type="button" class="tutorial-copy">Copy</button></div>
+              <p><strong>GitHub Pages:</strong> in your repo → Settings → Pages → Source: <em>Deploy from a branch</em> → branch <code>main</code>, folder <code>/ (root)</code> → Save. Your site goes live at <code>https://USERNAME.github.io/REPO/</code>. The <code>admin/</code> folder and <code>portfolio-data.json</code> are excluded from publishing via <code>.gitignore</code>/<code>.nojekyll</code> — the live site only needs <code>index.html</code>, CSS, JS and images.</p>
+              <p>Full walkthrough: see <code>COMMIT_GUIDE.md</code> in the project root.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="admin-toast" id="adminToast"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
