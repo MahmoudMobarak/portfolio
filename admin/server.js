@@ -241,7 +241,14 @@ if (req.method === 'POST' && pathname === '/api/push') {
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
-    res.writeHead(200, { 'Content-Type': contentType });
+    // No-cache for the panel's own files: without this the browser keeps serving a
+    // stale admin.js/admin.css after updates, making freshly-added buttons appear dead.
+    const noCache = pathname === '/' || pathname === '/index.html' || pathname === '/admin.css' ||
+      pathname === '/admin.js' || filePath.startsWith(__dirname);
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Cache-Control': noCache ? 'no-store, must-revalidate' : 'public, max-age=86400'
+    });
     fs.createReadStream(filePath).pipe(res);
   } else {
     res.writeHead(404, { 'Content-Type': 'text/plain' });

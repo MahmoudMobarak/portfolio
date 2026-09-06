@@ -156,6 +156,16 @@
           <button type="button" id="addCertBtn" class="btn btn-primary">+ Add New Certificate</button>
         </div>
 
+        <div class="form-card">
+          <h3>Categories</h3>
+          <p class="card-hint">Each category becomes its own group with a heading on the website. Type a new name (e.g. <code>Sports</code>) and click Add Category — then give it a description shown under the heading. A category stays on the site as long as it exists here, even while it has no certificates yet.</p>
+          <div id="certCategoryManager" class="tags-editor"></div>
+          <div class="add-tag-row">
+            <input type="text" id="newCertCategoryInput" class="form-input" placeholder="e.g. Sports">
+            <button type="button" id="addCertCategoryBtn" class="btn btn-sm btn-outline">Add Category</button>
+          </div>
+        </div>
+
         <div id="certificatesList" class="cards-admin-grid"></div>
       </section>
 
@@ -261,6 +271,7 @@
                 <li><strong>New category:</strong> just type a new category name on any certificate (e.g. <code>Sports</code>) — the website groups categories automatically.</li>
                 <li>Each certificate has <strong>title, description, tags</strong> (glass chips on the photo), an optional <strong>link</strong> (verification/PDF), and the photo upload.</li>
                 <li><strong>Remove:</strong> the Delete button on the card. <strong>Add:</strong> the "+ Add New Certificate" button.</li>
+                <li><strong>New category/group:</strong> Certificates tab → "Categories" card → type a name (e.g. <code>Sports</code>) → <strong>Add Category</strong>. It appears on the site immediately, even before it has certificates. Type over a category's name to rename it (its certificates move too), edit its description in the second box, and use &times; to remove it.</li>
                 <li>On the site, hover a certificate to expand it and click it to open the big reader view with ←/→ arrows.</li>
               </ul>
             </div>

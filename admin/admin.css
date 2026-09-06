@@ -460,6 +460,25 @@ body {
   max-width: 400px;
 }
 
+/* Certificate category manager rows */
+.cert-cat-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) 1fr auto;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.cert-cat-row .cat-name { font-weight: 600; }
+.cert-cat-row .cat-desc { min-width: 0; }
+@media (max-width: 700px) {
+  .cert-cat-row { grid-template-columns: 1fr; }
+}
+
 /* Dynamic list for bash lines */
 .dynamic-list {
   display: flex;

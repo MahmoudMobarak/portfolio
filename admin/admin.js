@@ -79,6 +79,7 @@ function renderAll() {
   renderHero();
   renderReportCards();
   renderCertificates();
+  renderCertCategories();
   renderProjects();
   renderExtracurriculars();
   renderSkills();
@@ -403,9 +404,88 @@ function renderCertificates() {
   });
 }
 
+/* ---- Certificate Category Manager ---- */
+function renderCertCategories() {
+  const wrap = document.getElementById('certCategoryManager');
+  if (!wrap) return;
+  if (!portfolioData.certificateCategories || typeof portfolioData.certificateCategories !== 'object') {
+    portfolioData.certificateCategories = {};
+  }
+  wrap.innerHTML = '';
+  Object.keys(portfolioData.certificateCategories).forEach((catName) => {
+    const row = document.createElement('div');
+    row.className = 'cert-cat-row';
+    const desc = ((portfolioData.certificateCategories[catName] || {}).description || '').replace(/"/g, '&quot;');
+    row.innerHTML = `
+      <input type="text" class="form-input cat-name" value="${catName.replace(/"/g, '&quot;')}" title="Category name (becomes the heading on the site)">
+      <input type="text" class="form-input cat-desc" value="${desc}" placeholder="Description shown under the heading">
+      <button type="button" class="btn btn-danger btn-sm cat-remove" title="Remove category">&times;</button>
+    `;
+
+    const nameInput = row.querySelector('.cat-name');
+    const descInput = row.querySelector('.cat-desc');
+
+    nameInput.onchange = () => {
+      const newName = nameInput.value.trim();
+      if (!newName || newName === catName) { nameInput.value = catName; return; }
+      if (portfolioData.certificateCategories[newName]) {
+        showToast('That category already exists.', true);
+        nameInput.value = catName;
+        return;
+      }
+      const entry = portfolioData.certificateCategories[catName];
+      delete portfolioData.certificateCategories[catName];
+      portfolioData.certificateCategories[newName] = entry;
+      (portfolioData.certificates || []).forEach(c => { if (c.category === catName) c.category = newName; });
+      showToast(`Renamed to "${newName}" — certificates moved with it.`);
+      renderCertCategories();
+      renderCertificates();
+    };
+
+    descInput.oninput = () => {
+      if (!portfolioData.certificateCategories[catName]) portfolioData.certificateCategories[catName] = {};
+      portfolioData.certificateCategories[catName].description = descInput.value.trim();
+    };
+
+    row.querySelector('.cat-remove').onclick = () => {
+      const inUse = (portfolioData.certificates || []).some(c => c.category === catName);
+      if (inUse) {
+        const others = Object.keys(portfolioData.certificateCategories).filter(k => k !== catName);
+        const target = others[0] || 'General';
+        if (!confirm(`"${catName}" still has certificates. They will be moved to "${target}". Continue?`)) return;
+        (portfolioData.certificates || []).forEach(c => { if (c.category === catName) c.category = target; });
+        if (!others.length && !portfolioData.certificateCategories[target]) {
+          portfolioData.certificateCategories[target] = { description: '' };
+        }
+      }
+      delete portfolioData.certificateCategories[catName];
+      renderCertCategories();
+      renderCertificates();
+    };
+
+    wrap.appendChild(row);
+  });
+}
+
+document.getElementById('addCertCategoryBtn').onclick = () => {
+  const input = document.getElementById('newCertCategoryInput');
+  const val = input.value.trim();
+  if (!val) return;
+  if (!portfolioData.certificateCategories) portfolioData.certificateCategories = {};
+  if (portfolioData.certificateCategories[val]) {
+    showToast('That category already exists.');
+    return;
+  }
+  portfolioData.certificateCategories[val] = { description: '' };
+  input.value = '';
+  renderCertCategories();
+  showToast(`Category "${val}" added — add certificates to it below.`);
+};
+
 document.getElementById('addCertBtn').onclick = () => {
+  const cats = Object.keys(portfolioData.certificateCategories || {});
   portfolioData.certificates.push({
-    category: "AI & Programming",
+    category: cats[0] || "General",
     title: "New Certificate",
     description: "What this certificate recognises.",
     tags: [],
@@ -669,7 +749,7 @@ function renderSkills() {
   renderTags('acadSkillsContainer', skills.academic);
   renderTags('softSkillsContainer', skills.soft);
 
-  const bindAdd = (btnId, inputId, key) => {
+  const bindAdd = (btnId, inputId, key, containerId) => {
     const btn = document.getElementById(btnId);
     if (!btn) return;
     btn.onclick = () => {
@@ -678,13 +758,13 @@ function renderSkills() {
       if (val) {
         skills[key].push(val);
         input.value = '';
-        renderTags(btnId.replace('add', '').replace('SkillBtn', '') === 'Tech' ? 'techSkillsContainer' : (btnId.includes('Acad') ? 'acadSkillsContainer' : 'softSkillsContainer'), skills[key]);
+        renderTags(containerId, skills[key]);
       }
     };
   };
-  bindAdd('addTechSkillBtn', 'newTechSkillInput', 'technical');
-  bindAdd('addAcadSkillBtn', 'newAcadSkillInput', 'academic');
-  bindAdd('addSoftSkillBtn', 'newSoftSkillInput', 'soft');
+  bindAdd('addTechSkillBtn', 'newTechSkillInput', 'technical', 'techSkillsContainer');
+  bindAdd('addAcadSkillBtn', 'newAcadSkillInput', 'academic', 'acadSkillsContainer');
+  bindAdd('addSoftSkillBtn', 'newSoftSkillInput', 'soft', 'softSkillsContainer');
 }
 
 /* ============================================================

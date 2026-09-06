@@ -93,13 +93,19 @@ function syncHtml(rootDir, data) {
   }
 
   // 3. Update Certificates
-  if (Array.isArray(data.certificates) && data.certificates.length > 0) {
+  if ((Array.isArray(data.certificates) && data.certificates.length > 0) ||
+      (data.certificateCategories && Object.keys(data.certificateCategories).length > 0)) {
     // Group certificates by category
     const categories = {};
     data.certificates.forEach(cert => {
       const cat = cert.category || "Other";
       if (!categories[cat]) categories[cat] = [];
       categories[cat].push(cert);
+    });
+    // Categories declared in the manager render even while they have no certificates yet,
+    // so a newly added group shows up on the site immediately.
+    Object.keys(data.certificateCategories || {}).forEach(catName => {
+      if (!categories[catName]) categories[catName] = [];
     });
 
     const escCert = (s) => String(s == null ? '' : s)
