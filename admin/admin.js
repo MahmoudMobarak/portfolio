@@ -337,8 +337,8 @@ function renderCertificates() {
       <div class="card-item-body">
         <img class="card-preview-img" src="/${cert.photo}" alt="${cert.title}">
         <div class="form-group">
-          <label>Category</label>
-          <input type="text" class="form-input cert-category" value="${cert.category || ''}" placeholder="e.g. AI & Programming">
+          <label>Category (choose from the list — manage options in the Categories card above)</label>
+          <select class="form-select cert-category"></select>
         </div>
         <div class="form-group">
           <label>Certificate Title</label>
@@ -369,7 +369,15 @@ function renderCertificates() {
       </div>
     `;
 
-    certEl.querySelector('.cert-category').oninput = (e) => cert.category = e.target.value.trim();
+    // Build the category dropdown from the Categories manager so it always
+    // reflects the current list (and includes the cert's own category if orphaned).
+    const catSelect = certEl.querySelector('.cert-category');
+    const managedCats = Object.keys(portfolioData.certificateCategories || {});
+    const catOptions = [...new Set([...managedCats, cert.category || 'General'])];
+    catSelect.innerHTML = catOptions.map(c =>
+      `<option value="${c.replace(/"/g, '&quot;')}">${c.replace(/"/g, '&quot;')}</option>`).join('');
+    catSelect.value = cert.category || 'General';
+    catSelect.onchange = (e) => cert.category = e.target.value.trim();
     certEl.querySelector('.cert-title').oninput = (e) => cert.title = e.target.value.trim();
     certEl.querySelector('.cert-desc-in').oninput = (e) => cert.description = e.target.value.trim();
     certEl.querySelector('.cert-tags').oninput = (e) => {
@@ -479,7 +487,8 @@ document.getElementById('addCertCategoryBtn').onclick = () => {
   portfolioData.certificateCategories[val] = { description: '' };
   input.value = '';
   renderCertCategories();
-  showToast(`Category "${val}" added — add certificates to it below.`);
+  renderCertificates();
+  showToast(`Category "${val}" added — choose it from any certificate's dropdown.`);
 };
 
 document.getElementById('addCertBtn').onclick = () => {
@@ -493,6 +502,8 @@ document.getElementById('addCertBtn').onclick = () => {
     photo: "Certificate/AI-Level 1.jpg"
   });
   renderCertificates();
+  const lists = document.querySelectorAll('#certificatesList .cert-category');
+  if (lists.length) { lists[lists.length - 1].focus(); }
 };
 
 /* ============================================================
