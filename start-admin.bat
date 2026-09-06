@@ -4,11 +4,16 @@ echo ========================================================
 echo   Mahmoud Mobarak Portfolio - Local Admin Launcher
 echo ========================================================
 echo.
-echo Starting local admin server on http://localhost:3000...
-echo All edits are strictly local and automatically sync to index.html
-echo for direct deployment to GitHub Pages.
+echo Starting the admin panel on http://localhost:3000 ...
+echo Your browser will open automatically once it is ready.
+echo.
+echo KEEP THIS WINDOW OPEN while you are editing.
+echo To stop the panel: close this window or press Ctrl+C.
 echo.
 
-start "" "http://localhost:3000"
+rem `node` must be in PATH. If this fails, install Node.js from https://nodejs.org
 node admin/server.js
+
+echo.
+echo The admin panel has stopped.
 pause

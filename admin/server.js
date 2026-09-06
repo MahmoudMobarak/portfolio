@@ -41,8 +41,18 @@ function readBody(req) {
 }
 
 const server = http.createServer(async (req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-  const pathname = decodeURIComponent(parsedUrl.pathname);
+  // A malformed request URI must never crash the whole server (this was the
+  // root cause of "localhost admin page doesn't work" — one bad request from
+  // a browser extension or scanner killed Node and the panel went offline)
+  let pathname;
+  try {
+    const parsedUrl = url.parse(req.url, true);
+    pathname = decodeURIComponent(parsedUrl.pathname);
+  } catch (_) {
+    res.writeHead(400, { 'Content-Type': 'text/plain' });
+    res.end('400 Bad Request');
+    return;
+  }
 
   // Set CORS headers for local administration
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -194,7 +204,29 @@ if (req.method === 'POST' && pathname === '/api/push') {
   }
 });
 
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`\n❌ Port ${PORT} is already in use.`);
+    console.error(`   The admin panel may already be running — try opening http://localhost:${PORT}`);
+    console.error(`   Or close the other program using port ${PORT} and run this again.`);
+  } else {
+    console.error('\n❌ Server failed to start:', err.message);
+  }
+  console.error('\nPress any key to close this window...');
+  process.exit(1);
+});
+
 server.listen(PORT, () => {
+  // Open the browser only AFTER the server is actually accepting connections
+  // (the old start-admin.bat opened it before Node booted → "site can't be reached")
+  try {
+    const { exec } = require('child_process');
+    const url = `http://localhost:${PORT}`;
+    if (process.platform === 'win32') exec(`start "" "${url}"`, { detached: true }).unref();
+    else if (process.platform === 'darwin') exec(`open ${url}`, { detached: true }).unref();
+    else exec(`xdg-open ${url}`, { detached: true }).unref();
+  } catch (_) { /* never block the server over a browser launch */ }
+
   console.log(`\n==================================================`);
   console.log(`🚀 Mahmoud Mobarak Portfolio Admin Panel Running!`);
   console.log(`🌐 URL: http://localhost:${PORT}`);
