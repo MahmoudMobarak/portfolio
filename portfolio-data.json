@@ -1,7 +1,7 @@
 {
   "hero": {
     "name": "Mahmoud Ahmed Mobarak",
-    "subtitle": "A Year 10 Student at The Westminster School, Dubai",
+    "subtitle": "A Year 11 Student at The Westminster School, Dubai",
     "photo": "Photos/Mahmoud-Mobarak-Photo.png",
     "bashLines": [
       "I am a high-achieving student passionate about learning, innovation, and excellence. I enjoy tackling complex challenges, exploring new ideas, and applying knowledge practically in projects and real-life applications.",
@@ -264,7 +264,7 @@
       "description": "Memorization achievement in the Quran Hifz program."
     },
     {
-      "category": "Quran & Arabic",
+      "category": "Academic Achievements",
       "title": "2 Consecutive Years - 100 in Arabic",
       "photo": "Certificate/2 Consective year 100 in arabic.jpg",
       "description": "Scored a perfect 100 in Arabic for two consecutive years."
@@ -396,7 +396,7 @@
         "Cryptography",
         "UI/UX"
       ],
-      "link": "#",
+      "link": "http://mahmoudmobarak.github.io/Keychain-order/",
       "fullTitle": "Lingua Mystica: Language Learning Concept",
       "points": [
         "Created a language-learning concept exploring creative approaches to mastering new languages.",
@@ -414,14 +414,15 @@
         "E-Commerce",
         "UI/UX"
       ],
-      "link": "#",
+      "link": "http://mahmoudmobarak.github.io/Keychain-order/",
       "fullTitle": "KeyCraft: E-commerce Storefront",
       "points": [
         "Built an e-commerce concept store around keyboard products with a modern storefront.",
         "Designed product pages, cart flow, and fully responsive layouts.",
         "Focused on clean UI and conversion-friendly design patterns."
       ],
-      "showLink": true
+      "showLink": true,
+      "github": "https://github.com/MahmoudMobarak/Keychain-order"
     }
   ],
   "extracurriculars": [
