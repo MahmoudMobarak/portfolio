@@ -1867,6 +1867,7 @@ main > section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 2;
   display: grid;
   place-items: center;
   width: 42px;
@@ -1876,6 +1877,7 @@ main > section {
   background: rgba(8, 24, 42, 0.92);
   color: #fff;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .lightbox-prev { left: 1rem; }
@@ -1993,7 +1995,9 @@ main > section {
   .footer-top { margin-left: 0; }
   .other-badges-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .other-badge-card img { padding: 0.6rem; }
-  .lightbox-nav { display: none !important; }
+  .lightbox-nav { width: 36px; height: 36px; font-size: 0.9rem; }
+  .lightbox-prev { left: 0.6rem; }
+  .lightbox-next { right: 0.6rem; }
   .cert-card h3 { font-size: 0.92rem; }
   .extra-body { padding: 1rem 1.1rem 1.2rem; }
   .extra-points { grid-template-columns: 1fr; }
