@@ -3,10 +3,11 @@
    Vanilla JavaScript, no dependencies.
    ============================================================ */
 
-// Set this to a real address to enable the email link + static-hosting
-// fallback for the contact form. Left empty on purpose: the form works
-// through the local admin server, and the site never ships a fake address.
-const CONTACT_EMAIL = '';
+// The contact form is delivered by FormSubmit (no server needed).
+// The first submission sends an activation link to this address; click it
+// once and every later message arrives in the inbox with a confirmation
+// copy sent automatically to the visitor.
+const CONTACT_EMAIL = 'mahmoudmobarak28.11@gmail.com';
 
 /* ------------------------------------------------------------
    1. Reveal on scroll
@@ -205,9 +206,10 @@ if (yearTabs.length > 0) {
 
 /* ------------------------------------------------------------
    6. Contact form
-   Works with the local admin server (/api/contact). When the site is
-   hosted statically there is no endpoint, so it falls back to a mailto
-   link if CONTACT_EMAIL is configured, or a clear message if not.
+   Posts natively to FormSubmit, so the owner gets the message and the
+   visitor gets an automatic confirmation copy. Keeping it a normal form
+   submission (rather than AJAX) is what allows FormSubmit to send the
+   auto-reply. After sending, FormSubmit returns to `?sent=1#contact`.
 ------------------------------------------------------------ */
 const contactForm = document.getElementById('contactForm');
 const confirmationPopup = document.getElementById('confirmationPopup');
@@ -239,60 +241,36 @@ if (contactForm && confirmationPopup && closePopup) {
     if (e.key === 'Escape') closePopupDialog();
   });
 
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+  // Return to the page that submitted the form, not the production domain.
+  const nextField = document.getElementById('contactNext');
+  if (nextField && /^https?:$/.test(window.location.protocol)) {
+    nextField.value = `${window.location.origin}${window.location.pathname}?sent=1#contact`;
+  }
 
-    if (!this.checkValidity()) {
-      this.reportValidity();
-      return;
-    }
+  // FormSubmit redirects back here after a successful native submission.
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('sent') === '1') {
+    setPopup('Message sent', 'Thank you for reaching out. A confirmation copy is on its way to your inbox, and I will reply as soon as I can.');
+    openPopup();
+    params.delete('sent');
+    const query = params.toString();
+    history.replaceState(null, '', `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`);
+  }
 
-    const submitBtn = this.querySelector('.submit-btn');
-    const originalLabel = submitBtn.textContent;
+  // The browser navigates away while FormSubmit handles delivery. Disable the
+  // button so a slow connection cannot cause a duplicate submission.
+  contactForm.addEventListener('submit', () => {
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    if (!submitBtn) return;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
+  });
 
-    const body = {
-      firstName: this.firstName.value.trim(),
-      lastName: this.lastName.value.trim(),
-      email: this.email.value.trim(),
-      subject: this.subject.value.trim(),
-      message: this.message.value.trim()
-    };
-
-    const fallbackToEmail = () => {
-      const summary = `${body.message}\n\n— ${body.firstName} ${body.lastName} (${body.email})`;
-      if (CONTACT_EMAIL) {
-        const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(body.subject)}&body=${encodeURIComponent(summary)}`;
-        window.location.href = href;
-        setPopup('Your email app is opening', 'The message is ready to send from your mail app. If nothing opened, use the email link on this page.');
-      } else {
-        setPopup('Message not sent', 'The live site is static, so the form needs the local admin server to deliver messages. Message me on GitHub and I will reply there.');
-      }
-      openPopup();
-    };
-
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    })
-      .then(async (res) => {
-        const type = res.headers.get('content-type') || '';
-        if (!res.ok || !type.includes('application/json')) throw new Error('No contact endpoint');
-        return res.json();
-      })
-      .then((result) => {
-        if (!result || !result.success) throw new Error((result && result.error) || 'Rejected');
-        setPopup('Message sent', "Thank you for reaching out. I'll try to respond as fast as I can.");
-        openPopup();
-        contactForm.reset();
-      })
-      .catch(() => fallbackToEmail())
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
-      });
+  window.addEventListener('pageshow', () => {
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    if (!submitBtn) return;
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send message';
   });
 }
 

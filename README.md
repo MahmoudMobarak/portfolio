@@ -86,9 +86,11 @@ Notes:
 - The `admin/` folder is a local tool. It is ignored by Git and is not needed for hosting.
 - Testmail and SMTP credentials are **never** written into `portfolio-data.json`; the local
   server keeps them in the ignored `admin/local-secrets.json` and merges them at runtime.
-- The contact form posts to `/api/contact`, which only exists in the local admin server.
-  On static hosting the form degrades gracefully: it opens the visitor's mail app if
-  `CONTACT_EMAIL` is set at the top of `script.js`, and otherwise shows a clear message.
-  Set `CONTACT_EMAIL` to your real address before publishing if you want that fallback.
+- The contact form posts to **FormSubmit** (`formsubmit.co`), so it works on static hosting
+  without a server or API key. `mahmoudmobarak28.11@gmail.com` is set in the form action in
+  `index.html`; the first real submission triggers a one-time activation email to that inbox.
+  Click the activation link once, and every later message is delivered there while the visitor
+  receives an automatic confirmation copy. `CONTACT_EMAIL` in `script.js` powers the direct
+  "Email me directly" link and must stay in sync with the form address.
 - Every image and PDF referenced by the page must stay in the repository (certificates,
   report-card scans, project screenshots, leadership badges). Do not add them to `.gitignore`.

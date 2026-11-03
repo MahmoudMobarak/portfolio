@@ -1428,16 +1428,21 @@
         <div class="contact-extra-links" id="contactExtraLinks"></div>
       </div>
 
-      <form class="contact-form" id="contactForm" novalidate>
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/mahmoudmobarak28.11@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from your portfolio">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Hi, this is an automatic confirmation that Mahmoud received your message through his portfolio. He will read it and reply to this email address as soon as he can. A copy of what you sent is included below.">
+        <input type="hidden" name="_next" id="contactNext" value="https://mahmoudportfolio.me/?sent=1#contact">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="input-group">
-          <input type="text" name="firstName" placeholder="First name" aria-label="First name" required>
-          <input type="text" name="lastName" placeholder="Last name" aria-label="Last name" required>
+          <input type="text" name="firstName" placeholder="First name" aria-label="First name" autocomplete="given-name" required>
+          <input type="text" name="lastName" placeholder="Last name" aria-label="Last name" autocomplete="family-name" required>
         </div>
-        <input type="email" name="email" placeholder="Your email" aria-label="Your email" required>
+        <input type="email" name="email" placeholder="Your email" aria-label="Your email" autocomplete="email" required>
         <input type="text" name="subject" placeholder="Subject" aria-label="Subject" required>
         <textarea name="message" rows="5" placeholder="Your message" aria-label="Your message" required></textarea>
         <button type="submit" class="submit-btn">Send message</button>
-        <p class="form-note">This form is delivered by the local admin server. On the live static site, use the GitHub link above to reach me.</p>
+        <p class="form-note">Your message comes straight to my inbox, and you'll get a confirmation copy by email.</p>
       </form>
     </div>
   </section>
@@ -1479,7 +1484,7 @@
   </div>
 </div>
 
-<script src="script.js?v=9"></script>
+<script src="script.js?v=10"></script>
 
 </body>
 </html>
