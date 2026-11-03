@@ -9,6 +9,24 @@
       "I am driven by curiosity, discipline, and a commitment to develop both my technical skills and leadership capabilities.",
       "Beyond academics, I enjoy engaging in extracurricular activities like football, solving puzzles, and creating innovative projects that expand my skillset and understanding of the world.",
       "My ultimate goal is to combine creativity, technical mastery, and personal growth to excel in multiple fields including Computer Science, Aerospace Engineering, and Aviation."
+    ],
+    "stats": [
+      {
+        "value": "29",
+        "label": "Certificates"
+      },
+      {
+        "value": "8",
+        "label": "Projects built"
+      },
+      {
+        "value": "4",
+        "label": "Competitions & expos"
+      },
+      {
+        "value": "11",
+        "label": "Years of reports"
+      }
     ]
   },
   "reportCards": [
@@ -34,13 +52,13 @@
       "year": "2",
       "term": "Year 2 - Final Term",
       "photo": "Report Cards/Photos/Final Term year 2 report card.jpg",
-      "pdf": "Report Cards/PDF/Final term year 2 report card.pdf"
+      "pdf": "Report Cards/PDF/Final Term year 2 report card.pdf"
     },
     {
       "year": "3",
       "term": "Year 3 - First Term",
-      "photo": "Report Cards/Photos/First term Year 3 report card.jpg",
-      "pdf": "Report Cards/PDF/First term Year 3 report card.pdf"
+      "photo": "Report Cards/Photos/First term year 3 report card.jpg",
+      "pdf": "Report Cards/PDF/First term year 3 report card.pdf"
     },
     {
       "year": "3",
@@ -58,7 +76,7 @@
       "year": "9",
       "term": "Year 9 - Mid Term",
       "photo": "Report Cards/Photos/Mid term report year 9.png",
-      "pdf": "Report Cards/PDF/Mid-Term Report_academic_year 9.pdf"
+      "pdf": "Report Cards/PDF/Mid-Term Report_academic_Year 9.pdf"
     },
     {
       "year": "9",
@@ -224,7 +242,7 @@
     {
       "category": "Dedication & Excellence",
       "title": "100% Attendance - 2025",
-      "photo": "Certificate/100% Attendance Certificate-January-2025.jpg",
+      "photo": "Certificate/100 Attendance Certificate-January-2025.jpg",
       "description": "Perfect attendance for the 2025 academic year."
     },
     {
@@ -295,7 +313,7 @@
         "Cleaned and engineered real housing datasets to improve prediction accuracy.",
         "Evaluated multiple regression algorithms and selected the strongest performer."
       ],
-      "showLink": true
+      "showLink": false
     },
     {
       "title": "Cat vs Dog Classifier",
@@ -313,7 +331,7 @@
         "Trained convolutional neural networks with data augmentation for robust results.",
         "Processed and prepared hundreds of labeled training images."
       ],
-      "showLink": true
+      "showLink": false
     },
     {
       "title": "Liver Cancer Predictor",
@@ -331,7 +349,7 @@
         "Focused on responsible, data-driven decision support for medical screening.",
         "Compared multiple classification algorithms to find the most reliable results."
       ],
-      "showLink": true
+      "showLink": false
     },
     {
       "title": "Mahmoud Mobarak Portfolio",
@@ -349,7 +367,7 @@
         "Includes custom creations: a 3D flip book, animated wallet cards, and an interactive hierarchy diagram.",
         "Runs as a fully static site with a local admin panel for easy content management."
       ],
-      "showLink": true
+      "showLink": false
     },
     {
       "title": "Homemade Water Filter",
@@ -367,7 +385,7 @@
         "Tested filtration effectiveness across multiple design iterations.",
         "Applied engineering design thinking to a real-world sustainability problem."
       ],
-      "showLink": true
+      "showLink": false
     },
     {
       "title": "Solar Panel Model",
@@ -385,7 +403,7 @@
         "Measured and compared energy output under different light conditions.",
         "Presented the project at a school science exhibition."
       ],
-      "showLink": true
+      "showLink": false
     },
     {
       "title": "Lingua Mystica",
@@ -396,7 +414,7 @@
         "Cryptography",
         "UI/UX"
       ],
-      "link": "http://mahmoudmobarak.github.io/Keychain-order/",
+      "link": "https://github.com/MahmoudMobarak/Keychain-order",
       "fullTitle": "Lingua Mystica: Language Learning Concept",
       "points": [
         "Created a language-learning concept exploring creative approaches to mastering new languages.",
@@ -414,7 +432,7 @@
         "E-Commerce",
         "UI/UX"
       ],
-      "link": "http://mahmoudmobarak.github.io/Keychain-order/",
+      "link": "https://github.com/MahmoudMobarak/Keychain-order",
       "fullTitle": "KeyCraft: E-commerce Storefront",
       "points": [
         "Built an e-commerce concept store around keyboard products with a modern storefront.",
@@ -518,5 +536,51 @@
     "Quran & Arabic": {
       "description": "Religious and language achievements."
     }
-  }
+  },
+  "leadership": [
+    {
+      "badge": "Photos/Leadership/badge-1.svg",
+      "year": "2024",
+      "description": "Head of Arabic — Wisdom House, leading language initiatives across the house."
+    },
+    {
+      "badge": "Photos/Leadership/badge-2.svg",
+      "year": "2025",
+      "description": "Nourish To Flourish Ambassador — promoting wellbeing and healthy habits."
+    },
+    {
+      "badge": "Photos/Leadership/badge-3.svg",
+      "year": "2026",
+      "description": "Student leadership team — mentoring younger students and shaping school events."
+    }
+  ],
+  "testmail": {
+    "enabled": true,
+    "apiKey": "",
+    "namespace": "",
+    "inboxTag": "contact",
+    "smtp": {
+      "enabled": false,
+      "host": "",
+      "port": 587,
+      "secure": false,
+      "authUser": "",
+      "authPass": ""
+    }
+  },
+  "githubUrl": "https://github.com/MahmoudMobarak",
+  "landingTitles": [
+    "11B6",
+    "Head of Arabic, Wisdom",
+    "Nourish To Flourish Ambassador",
+    "The Westminster School, Dubai"
+  ],
+  "otherBadges": [
+    {
+      "title": "Nourish To Flourish",
+      "description": "Nourish To Flourish Ambassador badge — promoting wellbeing and healthy habits.",
+      "photo": "Photos/Leadership/nourish-to-flourish.svg"
+    }
+  ],
+  "contactLinks": []
 }

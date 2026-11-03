@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Nourish To Flourish badge">
+  <circle cx="240" cy="240" r="208" fill="#0f2b4a"/>
+  <circle cx="240" cy="240" r="196" fill="none" stroke="#79bdff" stroke-width="10"/>
+  <circle cx="240" cy="240" r="168" fill="none" stroke="#305377" stroke-width="2"/>
+  <path d="M196 322 L176 420 L240 388 L304 420 L284 322 Z" fill="#79bdff"/>
+  <circle cx="240" cy="240" r="112" fill="#eef4ff"/>
+  <path d="M240 294 V206" fill="none" stroke="#1d1e1f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M240 252 C216 252 200 234 198 212 C222 212 238 228 240 252 Z" fill="#79bdff"/>
+  <path d="M240 232 C264 232 280 214 282 192 C258 192 242 208 240 232 Z" fill="#2f5da8"/>
+  <circle cx="240" cy="190" r="9" fill="#1d1e1f"/>
+</svg>

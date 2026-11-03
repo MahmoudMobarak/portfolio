@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Leadership badge">
+  <circle cx="240" cy="240" r="208" fill="#0f2b4a"/>
+  <circle cx="240" cy="240" r="196" fill="none" stroke="#e8e8e4" stroke-width="10"/>
+  <circle cx="240" cy="240" r="168" fill="none" stroke="#305377" stroke-width="2"/>
+  <path d="M196 322 L176 420 L240 388 L304 420 L284 322 Z" fill="#e8e8e4"/>
+  <circle cx="240" cy="240" r="104" fill="#79bdff"/>
+  <circle cx="240" cy="240" r="92" fill="none" stroke="#2f5da8" stroke-width="3"/>
+  <path d="M196 268 l-8 -62 32 22 20 -40 20 40 32 -22 -8 62 Z" fill="#1d1e1f"/>
+  <rect x="196" y="276" width="88" height="14" rx="6" fill="#1d1e1f"/>
+</svg>

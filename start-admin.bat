@@ -1,4 +1,6 @@
 @echo off
+rem Always run from the folder that contains this file (works from a Desktop shortcut)
+cd /d "%~dp0"
 title Mahmoud Mobarak Portfolio - Admin Panel
 echo ========================================================
 echo   Mahmoud Mobarak Portfolio - Local Admin Launcher
