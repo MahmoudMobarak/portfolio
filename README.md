@@ -63,7 +63,7 @@ git-ignored and untracked, so publishing never uploads the panel.
 
 The intro number strip is edited under **Profile & Hero → Intro Stats**: change any value or
 label, remove a box, or add a new statistic. Extra buttons below "See my work on GitHub" and
-"View my certificates" are managed under **Contact & email → Extra "Let's connect" buttons**.
+"View my certificates" are managed under **Contact & Links → Extra "Let's connect" buttons**.
 Each button takes a label and a link (full URL, `mailto:` or `#section`).
 
 Badge photos and other-badge photos are uploaded from **Leadership & badges** and stored in
