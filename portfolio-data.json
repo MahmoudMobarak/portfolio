@@ -270,7 +270,7 @@
       "description": "Named Student of the Month for outstanding conduct and achievement."
     },
     {
-      "category": "Quran & Arabic",
+      "category": "Quran",
       "title": "Hifz Quran",
       "photo": "Certificate/Hifz Quran.jpg",
       "description": "Memorization achievement in the Quran Hifz program."
@@ -614,7 +614,7 @@
     "Be A GEM": {
       "description": "In recognition of exceptional performance, positive attitude, and consistently Going the Extra Mile."
     },
-    "Quran & Arabic": {
+    "Quran": {
       "description": "Religious and language achievements."
     }
   },
