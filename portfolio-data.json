@@ -156,55 +156,55 @@
       "description": "Web fundamentals certification covering semantic HTML and modern CSS layouts."
     },
     {
-      "category": "Robotics & STEM",
+      "category": "Robotics & STEM & Innovation",
       "title": "FLL LEGO 2026",
       "photo": "Certificate/FLL LEGO 2026.jpg",
       "description": "First LEGO League 2026 competitor — designing, building, and programming autonomous LEGO robots."
     },
     {
-      "category": "Robotics & STEM",
+      "category": "Robotics & STEM & Innovation",
       "title": "FLL Participation",
       "photo": "Certificate/FLL-Participation.jpg",
       "description": "Recognized participation in the First LEGO League robotics competition."
     },
     {
-      "category": "Robotics & STEM",
+      "category": "Robotics & STEM & Innovation",
       "title": "Physics Exhibition",
       "photo": "Certificate/Contribution in Physics Exhibition.jpg",
       "description": "Contributed an exhibited project to the school Physics Exhibition."
     },
     {
-      "category": "Robotics & STEM",
+      "category": "Robotics & STEM & Innovation",
       "title": "Organic Expo Participation",
       "photo": "Certificate/Organic Expo Participation.jpg",
       "description": "Presented sustainable innovations at the Organic Expo."
     },
     {
-      "category": "Robotics & STEM",
+      "category": "Robotics & STEM & Innovation",
       "title": "2nd Place in GLOBEX",
       "photo": "Certificate/2nd place in GLOBEX.jpg",
       "description": "Second place at the GLOBEX competition with an engineering project."
     },
     {
-      "category": "Academic Achievements",
+      "category": "Be A GEM",
       "title": "Star Student - Maths 2025",
       "photo": "Certificate/Star student for maths 2025.jpg",
       "description": "Awarded Star Student for outstanding performance in Mathematics."
     },
     {
-      "category": "Academic Achievements",
+      "category": "Dedication & Excellence",
       "title": "Star Student - March Year 5",
       "photo": "Certificate/Star student March Year 5.jpg",
       "description": "Named Star Student in March of Year 5 for overall excellence."
     },
     {
-      "category": "Academic Achievements",
+      "category": "Dedication & Excellence",
       "title": "Star Student - November Year 6",
       "photo": "Certificate/Star Student November 2021 Year 6.jpg",
       "description": "Named Star Student in November of Year 6 for overall excellence."
     },
     {
-      "category": "Dedication & Excellence",
+      "category": "Be A GEM",
       "title": "450 Points Achievement",
       "photo": "Certificate/450 Points.png",
       "description": "Reached the 450-point achievement milestone."
@@ -228,7 +228,7 @@
       "description": "Finished Grade 1 second term in 5th position."
     },
     {
-      "category": "Academic Achievements",
+      "category": "Dedication & Excellence",
       "title": "3000 Reading Achievement",
       "photo": "Certificate/Achieve 3000 Reading Achievement.jpg",
       "description": "Read 3,000 pages as part of the school reading program."
@@ -252,14 +252,8 @@
       "description": "Recognized for consistently punctual arrival across the term."
     },
     {
-      "category": "Dedication & Excellence",
-      "title": "GEM Rewards - 300 Points",
-      "photo": "Certificate/Be A GEM Rewards Postcards_300P.jpeg",
-      "description": "Earned 300 GEM reward points for positive behavior and effort."
-    },
-    {
-      "category": "Dedication & Excellence",
-      "title": "GEM Rewards - 50 Points",
+      "category": "Be A GEM",
+      "title": "50 Points Achievement",
       "photo": "Certificate/Be A GEM Rewards Postcards_50P.jpg",
       "description": "Earned 50 GEM reward points for positive behavior and effort."
     },
@@ -288,7 +282,7 @@
       "description": "Scored a perfect 100 in Arabic for two consecutive years."
     },
     {
-      "category": "Dedication & Excellence",
+      "category": "Robotics & STEM & Innovation",
       "title": "Rewilding Minds Program",
       "description": "Certificate of participation as I re-wild my mind about nature",
       "tags": [],
@@ -296,7 +290,7 @@
       "photo": "Certificate/Mahmoud rewilding.png"
     },
     {
-      "category": "Be A GEM",
+      "category": "Dedication & Excellence",
       "title": "100% Attendance in January 2025",
       "description": "Recognized for 100% attendance in January of 2025",
       "tags": [],
@@ -320,20 +314,60 @@
       "photo": "Certificate/Be A GEM Rewards Postcards_500P.jpg"
     },
     {
-      "category": "AI & Programming",
-      "title": "New Certificate",
-      "description": "What this certificate recognises.",
+      "category": "Be A GEM",
+      "title": "650 Points Achievement",
+      "description": "Reached the 650-point achievement milestone in Year 10.",
       "tags": [],
       "link": "",
-      "photo": "Certificate/AI-Level 1.jpg"
+      "photo": "Certificate/Be A GEM Rewards Postcards_650P.jpg"
     },
     {
-      "category": "AI & Programming",
-      "title": "New Certificate",
-      "description": "What this certificate recognises.",
+      "category": "Be A GEM",
+      "title": "Leading with Vision",
+      "description": "In recognition of your outstanding embodiment of leading with vision.",
       "tags": [],
       "link": "",
-      "photo": "Certificate/AI-Level 1.jpg"
+      "photo": "Certificate/LEADING WITH VISION-Secondary.jpg"
+    },
+    {
+      "category": "Be A GEM",
+      "title": "Leading With Service",
+      "description": "In recognition of embodiment of leading with service.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/LEADING WITH SERVICE-Secondary.jpg"
+    },
+    {
+      "category": "Be A GEM",
+      "title": "Leading With Resilience",
+      "description": "In recognition of embodiment of leading with resilience.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/LEADING WITH RESILIENCE-Secondary.jpg"
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "100% attendance",
+      "description": "In recognition of 100% attendance and embodiment of Gems core values.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/100% ATTENDANCE -Secondary.jpg"
+    },
+    {
+      "category": "Be A GEM",
+      "title": "GEM of the Week",
+      "description": "IN recognition of outstanding achievement as GEM of the week and embodiment of GEMS core values.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/GEMS OF THE WEEK -Secondary.jpg"
+    },
+    {
+      "category": "Be A GEM",
+      "title": "Leading With integrity",
+      "description": "In recognition of outstanding achievement  and embodiment of GEMS core values.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/LEADING WITH INTEGRITY-Secondary.jpg"
     }
   ],
   "projects": [
@@ -553,6 +587,10 @@
       ]
     }
   ],
+  "reportNote": {
+    "enabled": true,
+    "text": "These reports aren't all here because I don't have the rest of them."
+  },
   "reportYears": [
     "1",
     "2",
@@ -564,7 +602,7 @@
     "AI & Programming": {
       "description": "Technical certifications in artificial intelligence and programming."
     },
-    "Robotics & STEM": {
+    "Robotics & STEM & Innovation": {
       "description": "Competitions, exhibitions, and hands-on STEM experience."
     },
     "Academic Achievements": {
