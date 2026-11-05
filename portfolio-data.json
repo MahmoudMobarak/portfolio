@@ -380,14 +380,14 @@
         "Scikit-Learn",
         "Machine Learning"
       ],
-      "link": "#",
+      "link": "sefsdf.com",
       "fullTitle": "House Price Predictor: ML Regression Model",
       "points": [
         "Built a machine learning model with Python and Scikit-Learn that predicts house prices from features like location, size, and amenities.",
         "Cleaned and engineered real housing datasets to improve prediction accuracy.",
         "Evaluated multiple regression algorithms and selected the strongest performer."
       ],
-      "showLink": false
+      "showLink": true
     },
     {
       "title": "Cat vs Dog Classifier",
