@@ -752,5 +752,10 @@
     }
   ],
   "contactLinks": [],
-  "contactEmail": "mahmoudmobarak28.11@gmail.com"
+  "contactEmail": "mahmoudmobarak28.11@gmail.com",
+  "emailjs": {
+    "publicKey": "",
+    "serviceId": "",
+    "templateId": ""
+  }
 }

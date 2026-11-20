@@ -95,8 +95,16 @@ Notes:
   the captcha disabled the post returns FormSubmit's success page and the message is emailed to
   the owner. FormSubmit only sends the visitor an automatic confirmation copy when reCAPTCHA is
   enabled (its docs: "autoresponse won't work with forms that are disabled reCAPTCHA and forms
-  that are submitting through AJAX"), and a captcha cannot be completed invisibly, so the form
-  does not promise that copy. The form posts into a hidden iframe, so the page never reloads or
+  that are submitting through AJAX"), and a captcha cannot be completed invisibly, so that copy
+  is sent separately through **EmailJS** instead, from the same Gmail account. The admin panel's
+  Contact tab has a “Visitor Confirmation Email — EmailJS” card for the Public Key, Service ID and
+  Template ID; saving it stores `emailjs` in `portfolio-data.json` and publishes the three values
+  as `data-emailjs-*` attributes on the contact form, which `script.js` reads. While any of them
+  is empty the extra email is skipped and the popup never promises one. The email design lives in
+  `admin/email-template.html` — open it in a browser to see it, or press “Copy email HTML” in the
+  panel and paste it into the EmailJS template's HTML editor. The template needs `To Email` =
+  `{{to_email}}`, `To Name` = `{{to_name}}`, a subject, and uses `{{to_name}}`, `{{from_name}}`,
+  `{{visitor_subject}}` and `{{visitor_message}}`. The free EmailJS tier allows 200 emails a month. The form posts into a hidden iframe, so the page never reloads or
   redirects, and an on-page popup confirms sending. `CONTACT_EMAIL` in `script.js` powers the direct
   "Email me directly" link and must stay in sync with the form address.
 - Every image and PDF referenced by the page must stay in the repository (certificates,

@@ -4,10 +4,55 @@
    ============================================================ */
 
 // The contact form is delivered by FormSubmit (no server needed).
-// The first submission sends an activation link to this address; click it
-// once and every later message arrives in the inbox with a confirmation
-// copy sent automatically to the visitor.
+// The first submission sends an activation link to this address; once it is
+// confirmed, every later message arrives in this inbox.
 const CONTACT_EMAIL = 'mahmoudmobarak28.11@gmail.com';
+
+// The visitor's confirmation copy. FormSubmit refuses to send an autoresponse
+// from a form with reCAPTCHA disabled, so that copy goes out through EmailJS
+// instead, from the same Gmail account. The admin panel saves the three public
+// IDs and publishes them as data attributes on the contact form (see
+// admin/sync_html.js). While any of them is empty the extra email is skipped
+// and the popup never promises one.
+const EMAILJS_FROM_NAME = 'Mahmoud Mobarak';
+
+function emailjsConfig() {
+  const form = document.getElementById('contactForm');
+  const data = (form && form.dataset) || {};
+  return {
+    publicKey: data.emailjsPublicKey || '',
+    serviceId: data.emailjsServiceId || '',
+    templateId: data.emailjsTemplateId || '',
+    fromName: EMAILJS_FROM_NAME
+  };
+}
+
+// Emails the visitor a copy of what they sent. Resolves to true only when
+// EmailJS accepted the request, so the popup can mention the copy truthfully.
+function sendVisitorConfirmation(details) {
+  const config = emailjsConfig();
+  const configured = Boolean(config.publicKey && config.serviceId && config.templateId);
+  if (!configured || !details || !details.toEmail) return Promise.resolve(false);
+  return fetch('https://api.emailjs.com/api/v1.0/email/send', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      service_id: config.serviceId,
+      template_id: config.templateId,
+      user_id: config.publicKey,
+      template_params: {
+        to_email: details.toEmail,
+        to_name: details.toName,
+        from_name: config.fromName,
+        reply_to: details.replyTo,
+        visitor_subject: details.subject,
+        visitor_message: details.message
+      }
+    })
+  })
+    .then((res) => res.ok)
+    .catch(() => false);
+}
 
 /* ------------------------------------------------------------
    1. Reveal on scroll
@@ -211,7 +256,9 @@ if (yearTabs.length > 0) {
    would otherwise answer a normal form post with a reCAPTCHA challenge page,
    which nothing can solve inside a hidden iframe and which silently drops the
    message. An in-page popup confirms sending without the visitor ever seeing
-   the framed receipt.
+   the framed receipt. The copy the visitor receives is sent separately through
+   EmailJS (see emailjsConfig above), because FormSubmit cannot autorespond to
+   a form whose captcha is off.
 ------------------------------------------------------------ */
 const contactForm = document.getElementById('contactForm');
 const confirmationPopup = document.getElementById('confirmationPopup');
@@ -233,6 +280,8 @@ if (contactForm && confirmationPopup && closePopup) {
   const defaultButtonLabel = submitBtn ? submitBtn.textContent : 'Send message';
   let awaitingReceipt = false;
   let receiptTimer = null;
+  let pendingConfirmation = null;
+  let visitorEmail = '';
 
   const setPopup = (title, message) => {
     const h = confirmationPopup.querySelector('h2');
@@ -263,11 +312,19 @@ if (contactForm && confirmationPopup && closePopup) {
     awaitingReceipt = false;
     restoreButton();
     contactForm.reset();
-    setPopup(
-      'Message sent',
-      'Thank you for reaching out. Your message is on its way to my inbox. I will reply to your email address as soon as I can.'
-    );
+    const thanks =
+      'Thank you for reaching out. Your message is on its way to my inbox. I will reply to your email address as soon as I can.';
+    setPopup('Message sent', thanks);
     openPopup();
+    // Mention the copy only once EmailJS has actually confirmed it.
+    const confirmation = pendingConfirmation;
+    const email = visitorEmail;
+    pendingConfirmation = null;
+    if (!confirmation) return;
+    confirmation.then((sent) => {
+      if (!sent || !email) return;
+      setPopup('Message sent', `${thanks} A copy has been emailed to ${email}.`);
+    });
   };
 
   // The hidden iframe absorbs FormSubmit's receipt page; the visitor stays put.
@@ -280,6 +337,17 @@ if (contactForm && confirmationPopup && closePopup) {
 
   contactForm.addEventListener('submit', () => {
     awaitingReceipt = true;
+    // Read the visitor's details now, before the form is cleared, and start
+    // their confirmation copy alongside FormSubmit's delivery to the inbox.
+    const data = new FormData(contactForm);
+    visitorEmail = String(data.get('email') || '').trim();
+    pendingConfirmation = sendVisitorConfirmation({
+      toEmail: visitorEmail,
+      toName: `${data.get('firstName') || ''} ${data.get('lastName') || ''}`.trim(),
+      subject: String(data.get('subject') || ''),
+      message: String(data.get('message') || ''),
+      replyTo: contactForm.dataset.contactEmail || CONTACT_EMAIL
+    });
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
