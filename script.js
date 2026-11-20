@@ -207,9 +207,11 @@ if (yearTabs.length > 0) {
 /* ------------------------------------------------------------
    6. Contact form
    The form posts natively to FormSubmit, but into a hidden iframe, so the
-   page never navigates away. FormSubmit emails the message to the owner and
-   sends the visitor an automatic confirmation copy; an in-page popup confirms
-   sending without the visitor ever seeing the framed receipt.
+   page never navigates away. The form sets _captcha=false, because FormSubmit
+   would otherwise answer a normal form post with a reCAPTCHA challenge page,
+   which nothing can solve inside a hidden iframe and which silently drops the
+   message. An in-page popup confirms sending without the visitor ever seeing
+   the framed receipt.
 ------------------------------------------------------------ */
 const contactForm = document.getElementById('contactForm');
 const confirmationPopup = document.getElementById('confirmationPopup');
@@ -263,7 +265,7 @@ if (contactForm && confirmationPopup && closePopup) {
     contactForm.reset();
     setPopup(
       'Message sent',
-      'Thank you for reaching out. Your message is on its way to my inbox, and a confirmation copy has been sent to your email address. I will reply as soon as I can.'
+      'Thank you for reaching out. Your message is on its way to my inbox. I will reply to your email address as soon as I can.'
     );
     openPopup();
   };

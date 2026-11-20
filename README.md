@@ -89,8 +89,15 @@ Notes:
 - The contact form posts to **FormSubmit** (`formsubmit.co`), so it works on static hosting
   without a server or API key. `mahmoudmobarak28.11@gmail.com` is set in the form action in
   `index.html`; the first real submission triggers a one-time activation email to that inbox.
-  Click the activation link once, and every later message is delivered there while the visitor
-  receives an automatic confirmation copy. The form posts into a hidden iframe, so the page never reloads or redirects, and an on-page popup confirms delivery. `CONTACT_EMAIL` in `script.js` powers the direct
+  The form carries `<input type="hidden" name="_captcha" value="false">` on purpose: without it
+  FormSubmit answers a normal form post with a reCAPTCHA challenge page, which cannot be solved
+  inside the hidden iframe and silently drops the message, so nothing is ever delivered. With
+  the captcha disabled the post returns FormSubmit's success page and the message is emailed to
+  the owner. FormSubmit only sends the visitor an automatic confirmation copy when reCAPTCHA is
+  enabled (its docs: "autoresponse won't work with forms that are disabled reCAPTCHA and forms
+  that are submitting through AJAX"), and a captcha cannot be completed invisibly, so the form
+  does not promise that copy. The form posts into a hidden iframe, so the page never reloads or
+  redirects, and an on-page popup confirms sending. `CONTACT_EMAIL` in `script.js` powers the direct
   "Email me directly" link and must stay in sync with the form address.
 - Every image and PDF referenced by the page must stay in the repository (certificates,
   report-card scans, project screenshots, leadership badges). Do not add them to `.gitignore`.
