@@ -2,7 +2,7 @@
   "hero": {
     "name": "Mahmoud Ahmed Mobarak",
     "subtitle": "A Year 11 Student at The Westminster School, Dubai",
-    "photo": "Photos/Mahmoud-Mobarak-Photo.png",
+    "photo": "Photos/School Photo.png",
     "bashLines": [
       "I am a high-achieving student passionate about learning, innovation, and excellence. I enjoy tackling complex challenges, exploring new ideas, and applying knowledge practically in projects and real-life applications.",
       "I constantly strive to grow academically, personally, and creatively, whether through coding, engineering, robotics, chess, or pursuing aerospace and aviation interests.",
@@ -211,21 +211,27 @@
     },
     {
       "category": "Academic Achievements",
-      "title": "2nd Position - Grade 2",
-      "photo": "Certificate/2nd position in garde 2.jpg",
-      "description": "Finished Grade 2 in 2nd position academically."
+      "title": "Certificate of Merit – General Proficiency Award (2025–2026)",
+      "description": "Recognises achieving the General Proficiency Award for the 2025–2026 academic year.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/genral.png"
     },
     {
       "category": "Academic Achievements",
-      "title": "4th Position - Grade 1",
-      "photo": "Certificate/4Th Postion in garde 1.jpg",
-      "description": "Finished Grade 1 in 4th position academically."
+      "title": "Certificate of Merit – Outstanding Achievements & Contributions (2025–2026)",
+      "description": "Recognises outstanding achievements and exceptional contributions during the 2025–2026 academic year.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/WhatsApp Image 2026-11-20 at 1.35.06 PM (1).jpeg"
     },
     {
       "category": "Academic Achievements",
-      "title": "5th Position - Grade 1 Second Term",
-      "photo": "Certificate/5Th postion in second term exams in garde 1.jpg",
-      "description": "Finished Grade 1 second term in 5th position."
+      "title": "Certificate of Merit – Highest Marks in Islamic Education (2024–2026)",
+      "description": "Recognizes achieving the highest marks in Islamic Education across two consecutive academic years (2024–2026).",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/WhatsApp Image 2026-11-20 at 1.35.06 PM.jpeg"
     },
     {
       "category": "Dedication & Excellence",
@@ -371,27 +377,21 @@
     },
     {
       "category": "Academic Achievements",
-      "title": "Certificate of Merit – Highest Marks in Islamic Education (2024–2026)",
-      "description": "Recognizes achieving the highest marks in Islamic Education across two consecutive academic years (2024–2026).",
-      "tags": [],
-      "link": "",
-      "photo": "Certificate/WhatsApp Image 2026-11-20 at 1.35.06 PM.jpeg"
+      "title": "4th Position - Grade 1",
+      "photo": "Certificate/4Th Postion in garde 1.jpg",
+      "description": "Finished Grade 1 in 4th position academically."
     },
     {
       "category": "Academic Achievements",
-      "title": "Certificate of Merit – Outstanding Achievements & Contributions (2025–2026)",
-      "description": "Recognises outstanding achievements and exceptional contributions during the 2025–2026 academic year.",
-      "tags": [],
-      "link": "",
-      "photo": "Certificate/WhatsApp Image 2026-11-20 at 1.35.06 PM (1).jpeg"
+      "title": "2nd Position - Grade 2",
+      "photo": "Certificate/2nd position in garde 2.jpg",
+      "description": "Finished Grade 2 in 2nd position academically."
     },
     {
       "category": "Academic Achievements",
-      "title": "Certificate of Merit – General Proficiency Award (2025–2026)",
-      "description": "Recognises achieving the General Proficiency Award for the 2025–2026 academic year.",
-      "tags": [],
-      "link": "",
-      "photo": "Certificate/genral.png"
+      "title": "5th Position - Grade 1 Second Term",
+      "photo": "Certificate/5Th postion in second term exams in garde 1.jpg",
+      "description": "Finished Grade 1 second term in 5th position."
     }
   ],
   "projects": [
