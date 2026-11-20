@@ -392,6 +392,38 @@
       "title": "5th Position - Grade 1 Second Term",
       "photo": "Certificate/5Th postion in second term exams in garde 1.jpg",
       "description": "Finished Grade 1 second term in 5th position."
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "Certificate of Merit – 2nd Rank in Class (2019–2020)",
+      "description": "Recognises outstanding academic performance and achieving 2nd rank in the class during the First Term Examination for the 2019–2020 academic year.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/3b 2nd.jpg"
+    },
+    {
+      "category": "Dedication & Excellence",
+      "title": "Certificate of Merit – 2nd Position in Handwriting Competition (2016–2017)",
+      "description": "Recognizes achieving second position in the Handwriting Competition during the 2016–2017 academic year.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/hand writing.jpg"
+    },
+    {
+      "category": "Robotics & STEM & Innovation",
+      "title": "Certificate of Merit – Runner-Up for Best Customer Experience Award (Market Day 2026)",
+      "description": "Recognises being the Runner-Up for the Best Customer Experience Award at Market Day 2026.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/best cutomr experince.jpg"
+    },
+    {
+      "category": "Be A GEM",
+      "title": "GEMS Excellence Certificate – Always Learning (2026)",
+      "description": "Recognises outstanding embodiment of the GEMS value of Always Learning.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/excellence.jpg"
     }
   ],
   "projects": [
