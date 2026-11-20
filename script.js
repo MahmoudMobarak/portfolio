@@ -208,8 +208,8 @@ if (yearTabs.length > 0) {
    6. Contact form
    The form posts natively to FormSubmit, but into a hidden iframe, so the
    page never navigates away. FormSubmit emails the message to the owner and
-   sends the visitor an automatic confirmation copy; the iframe finishing is
-   what triggers the in-page "message sent" popup.
+   sends the visitor an automatic confirmation copy; an in-page popup confirms
+   sending without the visitor ever seeing the framed receipt.
 ------------------------------------------------------------ */
 const contactForm = document.getElementById('contactForm');
 const confirmationPopup = document.getElementById('confirmationPopup');
@@ -268,8 +268,7 @@ if (contactForm && confirmationPopup && closePopup) {
     openPopup();
   };
 
-  // The hidden iframe loads FormSubmit's receipt once the submission has been
-  // accepted — the visible page stays exactly where it is.
+  // The hidden iframe absorbs FormSubmit's receipt page; the visitor stays put.
   if (contactSink) {
     contactSink.addEventListener('load', () => {
       if (!awaitingReceipt) return;
@@ -283,13 +282,11 @@ if (contactForm && confirmationPopup && closePopup) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
     }
-    // Safety net: if the browser blocks the framed receipt, still confirm so a
-    // slow or blocked iframe cannot leave the visitor stuck on "Sending…".
+    // The framed receipt is invisible and the visitor never needs it, so confirm
+    // shortly after the submission is handed off instead of waiting on it. If a
+    // browser is slow to load the frame, this still fires first.
     clearTimeout(receiptTimer);
-    receiptTimer = setTimeout(() => {
-      if (!awaitingReceipt) return;
-      showSent();
-    }, 20000);
+    receiptTimer = setTimeout(showSent, 1200);
   });
 }
 
