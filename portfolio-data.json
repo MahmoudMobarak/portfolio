@@ -95,6 +95,12 @@
       "term": "Year 10 - Mid Term",
       "photo": "Report Cards/Photos/Mid Term report year 10.png",
       "pdf": "Report Cards/PDF/Mid-Term Report_academic_year 10.pdf"
+    },
+    {
+      "year": "4",
+      "term": "Year 4-Term 1",
+      "photo": "Report Cards/Photos/3 term 1.jpg",
+      "pdf": ""
     }
   ],
   "skills": {
@@ -685,6 +691,7 @@
     "1",
     "2",
     "3",
+    "4",
     "9",
     "10"
   ],
@@ -726,18 +733,9 @@
     }
   ],
   "testmail": {
-    "enabled": true,
-    "apiKey": "",
+    "enabled": false,
     "namespace": "",
-    "inboxTag": "contact",
-    "smtp": {
-      "enabled": false,
-      "host": "",
-      "port": 587,
-      "secure": false,
-      "authUser": "",
-      "authPass": ""
-    }
+    "inboxTag": "contact"
   },
   "githubUrl": "https://github.com/MahmoudMobarak",
   "landingTitles": [
@@ -753,5 +751,6 @@
       "photo": "Photos/Leadership/WhatsApp Image 2026-11-04 at 7.11.34 PM.jpeg"
     }
   ],
-  "contactLinks": []
+  "contactLinks": [],
+  "contactEmail": "mahmoudmobarak28.11@gmail.com"
 }

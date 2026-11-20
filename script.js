@@ -217,9 +217,12 @@ const closePopup = document.getElementById('closePopup');
 
 (function wireContactEmail() {
   const link = document.getElementById('contactEmailLink');
-  if (!link || !CONTACT_EMAIL) return;
+  const form = document.getElementById('contactForm');
+  // The admin panel can switch delivery to TestMail without editing this file.
+  const email = (form && form.dataset.contactEmail) || CONTACT_EMAIL;
+  if (!link || !email) return;
   link.hidden = false;
-  link.href = `mailto:${CONTACT_EMAIL}`;
+  link.href = `mailto:${email}`;
 })();
 
 if (contactForm && confirmationPopup && closePopup) {
