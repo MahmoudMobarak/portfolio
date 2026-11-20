@@ -1790,11 +1790,10 @@
       </div>
       </div>
 
-      <form class="contact-form" id="contactForm" action="https://formsubmit.co/mahmoudmobarak28.11@gmail.com" method="POST" data-contact-email="mahmoudmobarak28.11@gmail.com">
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/mahmoudmobarak28.11@gmail.com" method="POST" data-contact-email="mahmoudmobarak28.11@gmail.com" target="contactSink">
         <input type="hidden" name="_subject" value="New message from your portfolio">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_autoresponse" value="Hi, this is an automatic confirmation that Mahmoud received your message through his portfolio. He will read it and reply to this email address as soon as he can. A copy of what you sent is included below.">
-        <input type="hidden" name="_next" id="contactNext" value="https://mahmoudportfolio.me/?sent=1#contact">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="input-group">
           <input type="text" name="firstName" placeholder="First name" aria-label="First name" autocomplete="given-name" required>
@@ -1806,6 +1805,7 @@
         <button type="submit" class="submit-btn">Send message</button>
         <p class="form-note">Your message comes straight to my inbox, and you'll get a confirmation copy by email.</p>
       </form>
+      <iframe name="contactSink" id="contactSink" title="Contact form delivery" style="display:none" aria-hidden="true" tabindex="-1"></iframe>
     </div>
   </section>
 

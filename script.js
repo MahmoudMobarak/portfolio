@@ -206,14 +206,15 @@ if (yearTabs.length > 0) {
 
 /* ------------------------------------------------------------
    6. Contact form
-   Posts natively to FormSubmit, so the owner gets the message and the
-   visitor gets an automatic confirmation copy. Keeping it a normal form
-   submission (rather than AJAX) is what allows FormSubmit to send the
-   auto-reply. After sending, FormSubmit returns to `?sent=1#contact`.
+   The form posts natively to FormSubmit, but into a hidden iframe, so the
+   page never navigates away. FormSubmit emails the message to the owner and
+   sends the visitor an automatic confirmation copy; the iframe finishing is
+   what triggers the in-page "message sent" popup.
 ------------------------------------------------------------ */
 const contactForm = document.getElementById('contactForm');
 const confirmationPopup = document.getElementById('confirmationPopup');
 const closePopup = document.getElementById('closePopup');
+const contactSink = document.getElementById('contactSink');
 
 (function wireContactEmail() {
   const link = document.getElementById('contactEmailLink');
@@ -226,6 +227,11 @@ const closePopup = document.getElementById('closePopup');
 })();
 
 if (contactForm && confirmationPopup && closePopup) {
+  const submitBtn = contactForm.querySelector('.submit-btn');
+  const defaultButtonLabel = submitBtn ? submitBtn.textContent : 'Send message';
+  let awaitingReceipt = false;
+  let receiptTimer = null;
+
   const setPopup = (title, message) => {
     const h = confirmationPopup.querySelector('h2');
     const p = confirmationPopup.querySelector('p');
@@ -244,36 +250,46 @@ if (contactForm && confirmationPopup && closePopup) {
     if (e.key === 'Escape') closePopupDialog();
   });
 
-  // Return to the page that submitted the form, not the production domain.
-  const nextField = document.getElementById('contactNext');
-  if (nextField && /^https?:$/.test(window.location.protocol)) {
-    nextField.value = `${window.location.origin}${window.location.pathname}?sent=1#contact`;
-  }
-
-  // FormSubmit redirects back here after a successful native submission.
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('sent') === '1') {
-    setPopup('Message sent', 'Thank you for reaching out. A confirmation copy is on its way to your inbox, and I will reply as soon as I can.');
-    openPopup();
-    params.delete('sent');
-    const query = params.toString();
-    history.replaceState(null, '', `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`);
-  }
-
-  // The browser navigates away while FormSubmit handles delivery. Disable the
-  // button so a slow connection cannot cause a duplicate submission.
-  contactForm.addEventListener('submit', () => {
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    if (!submitBtn) return;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-  });
-
-  window.addEventListener('pageshow', () => {
-    const submitBtn = contactForm.querySelector('.submit-btn');
+  const restoreButton = () => {
     if (!submitBtn) return;
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Send message';
+    submitBtn.textContent = defaultButtonLabel;
+  };
+
+  const showSent = () => {
+    clearTimeout(receiptTimer);
+    awaitingReceipt = false;
+    restoreButton();
+    contactForm.reset();
+    setPopup(
+      'Message sent',
+      'Thank you for reaching out. Your message is on its way to my inbox, and a confirmation copy has been sent to your email address. I will reply as soon as I can.'
+    );
+    openPopup();
+  };
+
+  // The hidden iframe loads FormSubmit's receipt once the submission has been
+  // accepted — the visible page stays exactly where it is.
+  if (contactSink) {
+    contactSink.addEventListener('load', () => {
+      if (!awaitingReceipt) return;
+      showSent();
+    });
+  }
+
+  contactForm.addEventListener('submit', () => {
+    awaitingReceipt = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }
+    // Safety net: if the browser blocks the framed receipt, still confirm so a
+    // slow or blocked iframe cannot leave the visitor stuck on "Sending…".
+    clearTimeout(receiptTimer);
+    receiptTimer = setTimeout(() => {
+      if (!awaitingReceipt) return;
+      showSent();
+    }, 20000);
   });
 }
 

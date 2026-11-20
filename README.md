@@ -90,7 +90,7 @@ Notes:
   without a server or API key. `mahmoudmobarak28.11@gmail.com` is set in the form action in
   `index.html`; the first real submission triggers a one-time activation email to that inbox.
   Click the activation link once, and every later message is delivered there while the visitor
-  receives an automatic confirmation copy. `CONTACT_EMAIL` in `script.js` powers the direct
+  receives an automatic confirmation copy. The form posts into a hidden iframe, so the page never reloads or redirects, and an on-page popup confirms delivery. `CONTACT_EMAIL` in `script.js` powers the direct
   "Email me directly" link and must stay in sync with the form address.
 - Every image and PDF referenced by the page must stay in the repository (certificates,
   report-card scans, project screenshots, leadership badges). Do not add them to `.gitignore`.
