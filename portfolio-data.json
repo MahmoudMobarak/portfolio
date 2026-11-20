@@ -734,7 +734,7 @@
   ],
   "testmail": {
     "enabled": false,
-    "namespace": "",
+    "namespace": "eea96",
     "inboxTag": "contact"
   },
   "githubUrl": "https://github.com/MahmoudMobarak",
