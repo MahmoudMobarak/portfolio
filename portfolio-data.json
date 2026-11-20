@@ -368,6 +368,30 @@
       "tags": [],
       "link": "",
       "photo": "Certificate/LEADING WITH INTEGRITY-Secondary.jpg"
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "Certificate of Merit – Highest Marks in Islamic Education (2024–2026)",
+      "description": "Recognizes achieving the highest marks in Islamic Education across two consecutive academic years (2024–2026).",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/WhatsApp Image 2026-11-20 at 1.35.06 PM.jpeg"
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "Certificate of Merit – Outstanding Achievements & Contributions (2025–2026)",
+      "description": "Recognises outstanding achievements and exceptional contributions during the 2025–2026 academic year.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/WhatsApp Image 2026-11-20 at 1.35.06 PM (1).jpeg"
+    },
+    {
+      "category": "Academic Achievements",
+      "title": "Certificate of Merit – General Proficiency Award (2025–2026)",
+      "description": "Recognises achieving the General Proficiency Award for the 2025–2026 academic year.",
+      "tags": [],
+      "link": "",
+      "photo": "Certificate/genral.png"
     }
   ],
   "projects": [
@@ -599,14 +623,14 @@
     "10"
   ],
   "certificateCategories": {
+    "Academic Achievements": {
+      "description": "Top placements and academic excellence awards."
+    },
     "AI & Programming": {
       "description": "Technical certifications in artificial intelligence and programming."
     },
     "Robotics & STEM & Innovation": {
       "description": "Competitions, exhibitions, and hands-on STEM experience."
-    },
-    "Academic Achievements": {
-      "description": "Top placements and academic excellence awards."
     },
     "Dedication & Excellence": {
       "description": "Recognition for punctuality, attendance, and conduct."
